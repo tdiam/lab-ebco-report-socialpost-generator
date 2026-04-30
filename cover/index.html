@@ -400,6 +400,7 @@
           color: 'white',//#38519e',
           x: 300,
           y: 660,
+          align: 'center',
         },
         visit: {
           font: {
@@ -586,10 +587,11 @@
         fontConfig,
         baseColor,
         containerHeight,
+        align,
       }) {
         if (DEBUG) {
           ctx.strokeStyle = '#ff0000';
-          ctx.strokeRect(x - maxWidth / 2, y, maxWidth, containerHeight);
+          ctx.strokeRect(x, y, maxWidth, containerHeight);
         }
 
         function calculateHeight(font) {
@@ -648,7 +650,7 @@
 
           // Render each wrapped line with the block's alignment
           wrappedLines.forEach((wrappedLine, i) => {
-            let resolvedAlign = block.align;
+            let resolvedAlign = block.align ?? align;
             if (resolvedAlign === 'justify' && i === wrappedLines.length - 1) {
               resolvedAlign = 'left';
             }
@@ -729,7 +731,10 @@
         }
 
         const totalWidth = segments.reduce((sum, seg) => sum + seg.width, 0);
-        let currentX = x - totalWidth / 2;
+        let currentX = x;
+        if (align === 'center') {
+            currentX -= totalWidth / 2;
+        }
 
         ctx.textAlign = 'left';
         ctx.textBaseline = 'middle';
@@ -772,6 +777,7 @@
             lineHeight: template[name].lineHeight,
             baseColor: template[name].color,
             containerHeight: template[name].containerHeight,
+            align: template[name].align,
           });
         }
 
@@ -789,6 +795,7 @@
             lineHeight: template[name].lineHeight,
             baseColor: template[name].color,
             containerHeight: template[name].containerHeight,
+            align: template[name].align,
           });
         }
 
