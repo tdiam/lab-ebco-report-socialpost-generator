@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Image Generator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:wght@400;700;900&display=block"
+      rel="preload"
+      as="style"
+    />
+    <link href="assets/bg.png" rel="preload" as="image" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:wght@400;700;900&display=block"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --spacing: 1rem;
+
+        @media (min-width: 992px) {
+          --spacing: 1.5rem;
+        }
+      }
+
+      body {
+        font-family: 'Noto Sans', sans-serif;
+        min-height: 100vh;
+
+        @media (min-width: 992px) {
+          padding: var(--spacing);
+        }
+      }
+
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        background: white;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+
+        @media (min-width: 992px) {
+          border-radius: var(--spacing);
+        }
+      }
+
+      .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing);
+        padding: var(--spacing);
+      }
+
+      .editor-section {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing);
+      }
+
+      .editor-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .editor-group label {
+        font-weight: 700;
+        color: #333;
+      }
+
+      .editor-group > div {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        background: white;
+      }
+
+      .ql-toolbar {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        background: #f8f9fa;
+      }
+
+      .ql-container {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        min-height: 100px;
+        font-size: 16px;
+      }
+
+      .preview-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .preview-section img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 600px;
+      }
+
+      .share-actions {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .share-actions button {
+        padding: 16px 40px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+      }
+
+      .share-actions button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+      }
+
+      .share-actions button:active {
+        transform: translateY(0);
+      }
+
+      .share-btn path {
+        fill: white;
+      }
+
+      @media (max-width: 1024px) {
+        .main {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="main">
+        <div class="editor-section">
+          <div class="editor-group">
+            <label>EBCO Annual Report</label>
+            <div id="heading-editor"></div>
+          </div>
+
+          <div class="editor-group">
+            <label>Quote</label>
+            <div id="body-editor"></div>
+          </div>
+
+          <div class="editor-group">
+            <label>EBCO President</label>
+            <div id="credit-title-editor"></div>
+          </div>
+        </div>
+
+        <div class="preview-section">
+          <img
+            id="preview-image"
+            src="https://placehold.co/1200x1200?text=..."
+            width="1200"
+            height="1200"
+          />
+          <div class="share-actions">
+            <button class="download-btn">Save PNG</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+    <script type="module">
+      import Quill from 'https://cdn.jsdelivr.net/npm/quill@2.0.3/+esm';
+      import debounce from 'https://cdn.jsdelivr.net/npm/debounce@3.0.0/+esm';
+      import { throttle } from 'https://cdn.jsdelivr.net/npm/throttle-debounce@3.0.1/+esm';
+
+      class QuillLocalDraft {
+        quill;
+        options;
+        listener;
+        initialized;
+
+        constructor(quill, options) {
+          this.quill = quill;
+          this.options = this.applyOptions(options);
+
+          /*
+            Quill start's up with a DOM load and then overwrites the editor, so we can't load the draft just yet.
+            Unfortunately, there's no reliable hook either... the text editor change event
+            doesn't get called unless there's predefined HTML content. So we rely on application-specific
+            initialization.
+            */
+          this.initialized = false;
+          if (this.options.bindInitial) this.bindInitialListener();
+        }
+
+        init() {
+          if (this.initialized) return;
+
+          this.initialized = true;
+          this.unbindListener();
+          this.loadDraft();
+          this.bindListener();
+        }
+
+        bindInitialListener() {
+          if (this.initialized) return this.bindListener();
+
+          this.unbindListener();
+
+          const listener = () => this.init();
+          this.listener = listener;
+
+          this.quill.once('text-change', this.listener);
+        }
+
+        bindListener() {
+          this.unbindListener();
+
+          const listener = () => this.saveDraft();
+          this.listener = this.options.saveDelay
+            ? throttle(this.options.saveDelay, listener)
+            : listener;
+
+          this.quill.on('text-change', this.listener);
+        }
+
+        unbindListener() {
+          if (!this.listener) return;
+
+          this.quill.off('text-change', this.listener);
+        }
+
+        applyOptions(options) {
+          return {
+            ...QuillLocalDraft.DEFAULT_OPTIONS,
+            ...options,
+          };
+        }
+
+        get id() {
+          return (this.options.prefix ?? '') + '_' + this.options.id;
+        }
+
+        getContents() {
+          return JSON.stringify(this.quill.getContents());
+        }
+
+        setContents(contents) {
+          let deserialized = null;
+          try {
+            deserialized = JSON.parse(contents);
+          } catch (e) {
+            console.error('Could not parse local draft Delta.');
+            return;
+          }
+          if (deserialized) this.quill.setContents(deserialized);
+        }
+
+        getDraft() {
+          const id = this.id;
+          let draft = '';
+          try {
+            draft = localStorage.getItem(id) ?? '';
+          } catch (e) {
+            // ?
+          }
+          return draft;
+        }
+
+        setDraft(content = '') {
+          const id = this.id;
+
+          try {
+            localStorage.setItem(id, content);
+          } catch (e) {
+            if (e instanceof DOMException && e.code == e.QUOTA_EXCEEDED_ERR) {
+              console.error('Could not save local draft', e);
+            } else {
+              throw e;
+            }
+          }
+        }
+
+        saveDraft() {
+          const contents = this.getContents();
+          this.setDraft(contents);
+        }
+
+        loadDraft() {
+          const draft = this.getDraft();
+          this.setContents(draft);
+        }
+
+        editorIsEmpty() {
+          return this.quill.getText().trim().length == 0;
+        }
+      }
+      QuillLocalDraft.DEFAULT_OPTIONS = {
+        id: '',
+        prefix: 'quill_local_draft',
+        saveDelay: 1000,
+        displaySave: true,
+        bindInitial: true,
+      };
+
+      Quill.register({ 'modules/localDraft': QuillLocalDraft });
+
+      const previewEl = document.getElementById('preview-image');
+      const DEBUG = false;
+      const CANVAS_WIDTH = previewEl.getAttribute('width');
+      const CANVAS_HEIGHT = previewEl.getAttribute('height');
+
+      const canvas = new OffscreenCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
+      const ctx = canvas.getContext('2d');
+
+      const background = new Promise((res) => {
+        const im = new Image();
+        im.src = `assets/bg.png`;
+        im.fetchPriority = 'high';
+        im.onload = function () {
+          res(im);
+        };
+      });
+
+      const template = {
+        background,
+        renderBackground: async (ctx) => {
+          ctx.fillStyle = ctx.createPattern(await background, 'no-repeat');
+          ctx.rect(0, 0, canvas.width, canvas.height);
+          ctx.fill();
+        },
+        heading: {
+          font: {
+            size: [32],
+            style: '700',
+            family: 'Noto Sans',
+          },
+          containerHeight: 36,
+          lineHeight: 1.1,
+          color: '#fcee2d',
+          x: canvas.width / 2,
+          y: 220,
+        },
+        headingYear: {
+          font: {
+            size: [20],
+            style: '400',
+            family: 'Noto Sans',
+          },
+          containerHeight: 22,
+          lineHeight: 1.1,
+          color: '#ffffff',
+          x: canvas.width / 2,
+          y: 260,
+        },
+        body: {
+          font: {
+            size: [54, 50, 46, 42, 38, 34, 30],
+            style: '700',
+            family: 'Noto Sans',
+          },
+          containerHeight: 400,
+          lineHeight: 1.5,
+          color: '#32517f',
+          x: canvas.width / 2,
+          y: 500,
+        },
+        creditName: {
+          font: {
+            size: [30],
+            style: '700',
+            family: 'Noto Sans',
+          },
+          containerHeight: 45,
+          lineHeight: 1.5,
+          color: '#32517f',
+          x: 980,
+          y: 940,
+        },
+        creditTitle: {
+          font: {
+            size: [30],
+            style: '700',
+            family: 'Noto Sans',
+            highlight: true,
+          },
+          containerHeight: 45,
+          lineHeight: 1.5,
+          color: '#32517f',
+          x: 980,
+          y: 980,
+        },
+      };
+
+      const statics = {
+        headingYear: {
+          block: {
+            segments: [{ text: '2025' }],
+          },
+        },
+        creditName: {
+          block: {
+            segments: [{ text: 'Daniele Taurino' }],
+          },
+        },
+      };
+
+      const editables = {
+        heading: {
+          quill: new Quill('#heading-editor', {
+            theme: 'snow',
+            formats: [],
+            modules: {
+              toolbar: null,
+              localDraft: {
+                id: 'heading',
+              },
+            },
+          }),
+        },
+        body: {
+          quill: new Quill('#body-editor', {
+            theme: 'snow',
+            formats: ['bold'],
+            modules: {
+              toolbar: [['bold']],
+              localDraft: {
+                id: 'body',
+              },
+            },
+          }),
+        },
+        creditTitle: {
+          quill: new Quill('#credit-title-editor', {
+            theme: 'snow',
+            formats: [],
+            modules: {
+              toolbar: null,
+              localDraft: {
+                id: 'credit-title',
+              },
+            },
+          }),
+        },
+      };
+
+      // Parse Quill ops into blocks (lines with alignment)
+      function parseOpsIntoBlocks(ops) {
+        const blocks = [];
+        let currentBlock = {
+          segments: [],
+          align: 'left', // default alignment
+        };
+
+        for (const op of ops) {
+          const text = op.insert || '';
+
+          // Check if this op contains newline(s)
+          if (text.includes('\n')) {
+            const parts = text.split('\n');
+
+            for (let i = 0; i < parts.length; i++) {
+              // Add the text before the newline to current block
+              if (parts[i]) {
+                currentBlock.segments.push({
+                  text: parts[i],
+                  bold: op.attributes?.bold,
+                });
+              }
+
+              // If this is not the last part, we have a newline
+              if (i < parts.length - 1) {
+                // The alignment comes from the newline's attributes
+                currentBlock.align = op.attributes?.align || 'left';
+                blocks.push(currentBlock);
+                currentBlock = {
+                  segments: [],
+                  align: 'left',
+                };
+              }
+            }
+
+            // If text ends with newline, the last part is empty and we already pushed
+            // The alignment for ending newline is preserved in op.attributes
+            if (text.endsWith('\n')) {
+              currentBlock.align = op.attributes?.align || 'left';
+            }
+          } else {
+            // No newline, just add text to current block
+            currentBlock.segments.push({
+              text: text,
+              bold: op.attributes?.bold,
+            });
+          }
+        }
+
+        // Add any remaining content (though Quill should always end with \n)
+        if (currentBlock.segments.length > 0) {
+          blocks.push(currentBlock);
+        }
+
+        return blocks;
+      }
+
+      function wrapAndRenderBlocks({
+        ctx,
+        blocks,
+        x,
+        y,
+        maxWidth,
+        lineHeight,
+        fontConfig,
+        baseColor,
+        containerHeight,
+      }) {
+        if (DEBUG) {
+          ctx.strokeStyle = '#ff0000';
+          ctx.strokeRect(x - maxWidth / 2, y, maxWidth, containerHeight);
+        }
+
+        function calculateHeight(font) {
+          let lines = 0;
+
+          const lastNonEmptyBlockIdx = blocks.findLastIndex(
+            (block) => block.segments.length,
+          );
+          blocks = blocks.slice(0, lastNonEmptyBlockIdx + 1);
+
+          for (const block of blocks) {
+            lines += wrapBlockSegments({
+              ctx,
+              segments: block.segments,
+              maxWidth,
+              baseFont: font,
+              baseColor,
+            }).length;
+          }
+
+          return lines * lineHeight * font.size;
+        }
+
+        function convergeFont() {
+          const fontCandidates = fontConfig.size.map((size) => ({
+            ...fontConfig,
+            size,
+          }));
+
+          for (const font of fontCandidates) {
+            if (calculateHeight(font) <= containerHeight) {
+              return font;
+            }
+          }
+
+          // return last candidate if none fulfilled the height criterion
+          return fontCandidates.at(-1);
+        }
+
+        let font = convergeFont();
+
+        let currentY =
+          y +
+          (lineHeight * font.size) / 2 +
+          // vertical align
+          (containerHeight - calculateHeight(font)) / 2;
+
+        for (const block of blocks) {
+          const wrappedLines = wrapBlockSegments({
+            ctx,
+            segments: block.segments,
+            maxWidth,
+            baseFont: font,
+            baseColor,
+          });
+
+          // Render each wrapped line with the block's alignment
+          wrappedLines.forEach((wrappedLine, i) => {
+            let resolvedAlign = block.align;
+            if (resolvedAlign === 'justify' && i === wrappedLines.length - 1) {
+              resolvedAlign = 'left';
+            }
+
+            renderLine({
+              ctx,
+              segments: wrappedLine,
+              x,
+              y: currentY,
+              maxWidth,
+              lineHeight,
+              align: resolvedAlign,
+            });
+            currentY += lineHeight * font.size;
+          });
+        }
+      }
+
+      function wrapBlockSegments({
+        ctx,
+        segments,
+        maxWidth,
+        baseFont,
+        baseColor,
+      }) {
+        const wrappedLines = [];
+        let currentLine = [];
+        let currentWidth = 0;
+
+        for (const seg of segments) {
+          const text = seg.text || '';
+          const words = text.split(' ');
+
+          for (let i = 0; i < words.length; i++) {
+            const word = words[i] + (i < words.length - 1 ? ' ' : '');
+
+            let font = { ...baseFont };
+            // we use Quill's "Bold" to toggle a highlight behind the text
+            if (seg.bold) {
+              font.highlight = true;
+            }
+
+            ctx.font = `${font.style} ${font.size}px "${font.family}"`;
+            const wordWidth = ctx.measureText(word).width;
+
+            if (currentWidth + wordWidth > maxWidth && currentLine.length > 0) {
+              wrappedLines.push([...currentLine]);
+              currentLine = [];
+              currentWidth = 0;
+            }
+
+            currentLine.push({
+              text: word,
+              font,
+              color: baseColor,
+              width: wordWidth,
+            });
+            currentWidth += wordWidth;
+          }
+        }
+
+        wrappedLines.push(currentLine);
+        return wrappedLines;
+      }
+
+      function renderLine({
+        ctx,
+        segments,
+        x,
+        y,
+        maxWidth,
+        lineHeight,
+        align,
+      }) {
+        if (!segments.length) {
+          // this is just a new line
+          return;
+        }
+
+        const totalWidth = segments.reduce((sum, seg) => sum + seg.width, 0);
+        let currentX = x - totalWidth / 2;
+
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'middle';
+
+        for (const seg of segments) {
+          if (seg.font.highlight) {
+            const rectHeight = lineHeight * seg.font.size;
+            const paddingX = seg.font.size * 0.2;
+            ctx.fillStyle = '#fcee2d';
+            ctx.fillRect(
+              currentX - paddingX / 2,
+              y - rectHeight / 2,
+              seg.width + paddingX,
+              rectHeight,
+            );
+          }
+
+          ctx.font = `${seg.font.style} ${seg.font.size}px "${seg.font.family}"`;
+          ctx.fillStyle = seg.color;
+          ctx.fillText(seg.text, currentX, y);
+          currentX += seg.width;
+        }
+      }
+
+      async function _renderCanvas() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        await template.renderBackground(ctx);
+
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'middle';
+
+        for (const [name, txt] of Object.entries(statics)) {
+          wrapAndRenderBlocks({
+            ctx,
+            blocks: [{ align: 'left', ...txt.block }],
+            x: template[name].x,
+            y: template[name].y,
+            maxWidth: canvas.width - 200,
+            fontConfig: template[name].font,
+            lineHeight: template[name].lineHeight,
+            baseColor: template[name].color,
+            containerHeight: template[name].containerHeight,
+          });
+        }
+
+        for (const [name, txt] of Object.entries(editables)) {
+          const contents = txt.quill.getContents();
+          const blocks = parseOpsIntoBlocks(contents.ops);
+
+          wrapAndRenderBlocks({
+            ctx,
+            blocks,
+            x: template[name].x,
+            y: template[name].y,
+            maxWidth: canvas.width - 200,
+            fontConfig: template[name].font,
+            lineHeight: template[name].lineHeight,
+            baseColor: template[name].color,
+            containerHeight: template[name].containerHeight,
+          });
+        }
+
+        canvas.convertToBlob().then((blob) => {
+          previewEl.src = URL.createObjectURL(blob);
+          previewEl.style.opacity = '100%';
+        });
+      }
+
+      const _debouncedRenderCanvas = debounce(_renderCanvas, 500);
+
+      function renderCanvas() {
+        previewEl.style.opacity = '50%';
+        _debouncedRenderCanvas();
+      }
+
+      const Delta = Quill.import('delta');
+
+      function initFromLocal() {
+        for (const e of Object.values(editables)) {
+          e.quill.getModule('localDraft').init();
+        }
+      }
+
+      function initFromUrl() {
+        const u = new URL(window.location.href);
+        for (const [name, e] of Object.entries(editables)) {
+          if (u.searchParams.has(name)) {
+            e.quill.setContents([]);
+            e.quill.updateContents(
+              new Delta().insert(u.searchParams.get(name)),
+            );
+          }
+        }
+      }
+
+      function bindListeners() {
+        for (const e of Object.values(editables)) {
+          e.quill.on('text-change', renderCanvas);
+        }
+      }
+
+      initFromLocal();
+      initFromUrl();
+      bindListeners();
+
+      document.querySelector('.download-btn').addEventListener('click', () => {
+        const link = document.createElement('a');
+        link.download = 'social-image.png';
+        canvas.convertToBlob().then((blob) => {
+          link.href = URL.createObjectURL(blob);
+          link.click();
+        });
+      });
+
+      document.fonts.ready.then(renderCanvas);
+    </script>
+  </body>
+</html>

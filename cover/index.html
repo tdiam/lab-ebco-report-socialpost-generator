@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Social Image Generator</title>
+        <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@700&family=Roboto:wght@400;700;900&display=block"
+            rel="preload" as="style">
+        <link href="assets/bg_blue.png" rel="preload" as="image" />
+        <link href="assets/bg_fuchsia.png" rel="preload" as="image" />
+        <link href="assets/bg_green.png" rel="preload" as="image" />
+        <link href="assets/bg_indigo.png" rel="preload" as="image" />
+        <link href="assets/bg_red.png" rel="preload" as="image" />
+        <link href="assets/bg_yellow.png" rel="preload" as="image" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@700&family=Roboto:wght@400;700;900&display=block"
+            rel="stylesheet">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            :root {
+                --spacing: 1rem;
+
+                @media (min-width: 992px) {
+                    --spacing: 1.5rem;
+                }
+            }
+
+            body {
+                font-family: 'Inter', sans-serif;
+                min-height: 100vh;
+
+                @media (min-width: 992px) {
+                    padding: var(--spacing);
+                }
+            }
+
+            .container {
+                max-width: 1400px;
+                margin: 0 auto;
+                background: white;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+                overflow: hidden;
+
+                @media (min-width: 992px) {
+                    border-radius: var(--spacing);
+                }
+            }
+
+            .main {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: var(--spacing);
+                padding: var(--spacing);
+            }
+
+            .editor-section {
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing);
+            }
+
+            .template-selector {
+                margin-bottom: 10px;
+            }
+
+            .template-selector label {
+                display: block;
+                font-weight: 700;
+                margin-bottom: 10px;
+                color: #333;
+            }
+
+            .template-grid {
+                display: flex;
+                flex-flow: row wrap;
+                gap: .5rem;
+            }
+
+            .template-btn {
+                padding: 12px;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                position: relative;
+                transition: all 0.2s;
+                font-size: 0;
+            }
+
+            .template-btn:hover {
+                transform: translateY(-2px);
+            }
+
+            .template-btn.active::before {
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 0;
+                background: #333;
+                width: 100%;
+                height: 4px;
+            }
+
+            .editor-group {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .editor-group label {
+                font-weight: 700;
+                color: #333;
+            }
+
+            #heading-editor,
+            #body-editor {
+                border: 1px solid #e0e0e0;
+                border-radius: 8px;
+                background: white;
+            }
+
+            .ql-toolbar {
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                background: #f8f9fa;
+            }
+
+            .ql-container {
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+                min-height: 100px;
+                font-size: 16px;
+            }
+
+            .preview-section {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            }
+
+            .preview-section img {
+                width: auto;
+                max-width: 100%;
+                height: auto;
+                max-height: 600px;
+            }
+
+            .share-actions {
+                display: flex;
+                gap: 1rem;
+            }
+
+            .share-actions button {
+                padding: 16px 40px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                border: none;
+                border-radius: 8px;
+                font-size: 16px;
+                font-weight: 700;
+                cursor: pointer;
+                transition: transform 0.2s, box-shadow 0.2s;
+                box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+            }
+
+            .share-actions button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+            }
+
+            .share-actions button:active {
+                transform: translateY(0);
+            }
+
+            .share-btn path {
+                fill: white;
+            }
+
+            @media (max-width: 1024px) {
+                .main {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="main">
+                <div class="editor-section">
+                    <div class="template-selector">
+                        <div class="template-grid">
+                            <button class="template-btn active" data-template="fuchsia">Fuchsia</button>
+                            <button class="template-btn" data-template="blue">Blue</button>
+                            <button class="template-btn" data-template="green">Green</button>
+                            <button class="template-btn" data-template="indigo">Indigo</button>
+                            <button class="template-btn" data-template="red">Red</button>
+                            <button class="template-btn" data-template="yellow">Yellow</button>
+                        </div>
+                    </div>
+
+                    <div class="editor-group">
+                        <label>Τίτλος</label>
+                        <div id="heading-editor"></div>
+                    </div>
+
+                    <div class="editor-group">
+                        <label>Κείμενο</label>
+                        <div id="body-editor"></div>
+                    </div>
+                </div>
+
+                <div class="preview-section">
+                    <img id="preview-image" src="https://placehold.co/1080x1350?text=..." width="1080" height="1350">
+                    <div class="share-actions">
+                        <button class="share-btn">
+                            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path
+                                    d="M448 256C501 256 544 213 544 160C544 107 501 64 448 64C395 64 352 107 352 160C352 165.4 352.5 170.8 353.3 176L223.6 248.1C206.7 233.1 184.4 224 160 224C107 224 64 267 64 320C64 373 107 416 160 416C184.4 416 206.6 406.9 223.6 391.9L353.3 464C352.4 469.2 352 474.5 352 480C352 533 395 576 448 576C501 576 544 533 544 480C544 427 501 384 448 384C423.6 384 401.4 393.1 384.4 408.1L254.7 336C255.6 330.8 256 325.5 256 320C256 314.5 255.5 309.2 254.7 304L384.4 231.9C401.3 246.9 423.6 256 448 256z" />
+                            </svg>
+                        </button>
+                        <button class="download-btn">Αποθήκευση PNG</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+        <script type="module">
+            import Quill from 'https://cdn.jsdelivr.net/npm/quill@2.0.3/+esm'
+            import debounce from 'https://cdn.jsdelivr.net/npm/debounce@3.0.0/+esm'
+            import { throttle } from 'https://cdn.jsdelivr.net/npm/throttle-debounce@3.0.1/+esm';
+
+            class QuillLocalDraft {
+                quill;
+                options;
+                listener;
+                initialized;
+
+                constructor(quill, options) {
+                    this.quill = quill;
+                    this.options = this.applyOptions(options);
+
+                    /*
+                    Quill start's up with a DOM load and then overwrites the editor, so we can't load the draft just yet.
+                    Unfortunately, there's no reliable hook either... the text editor change event
+                    doesn't get called unless there's predefined HTML content. So we rely on application-specific
+                    initialization.
+                    */
+                    this.initialized = false;
+                    if (this.options.bindInitial)
+                        this.bindInitialListener();
+                }
+
+                init() {
+                    if (this.initialized)
+                        return;
+
+                    this.initialized = true;
+                    this.unbindListener();
+                    this.loadDraft();
+                    this.bindListener();
+                }
+
+                bindInitialListener() {
+                    if (this.initialized)
+                        return this.bindListener();
+
+                    this.unbindListener();
+
+                    const listener = () => this.init();
+                    this.listener = listener;
+
+                    this.quill.once('text-change', this.listener);
+                }
+
+                bindListener() {
+                    this.unbindListener();
+
+                    const listener = () => this.saveDraft();
+                    this.listener = this.options.saveDelay ? throttle(this.options.saveDelay, listener) : listener;
+
+                    this.quill.on('text-change', this.listener);
+                }
+
+                unbindListener() {
+                    if (!this.listener)
+                        return;
+
+                    this.quill.off('text-change', this.listener);
+                }
+
+                applyOptions(options) {
+                    return {
+                        ...QuillLocalDraft.DEFAULT_OPTIONS,
+                        ...options
+                    };
+                }
+
+                get id() {
+                    return (this.options.prefix ?? '') + '_' + this.options.id;
+                }
+
+                getContents() {
+                    return JSON.stringify(this.quill.getContents());
+                }
+
+                setContents(contents) {
+                    let deserialized = null;
+                    try {
+                        deserialized = JSON.parse(contents);
+                    } catch (e) {
+                        console.error("Could not parse local draft Delta.");
+                        return;
+                    }
+                    if (deserialized)
+                        this.quill.setContents(deserialized);
+                }
+
+                getDraft() {
+                    const id = this.id;
+                    let draft = '';
+                    try {
+                        draft = localStorage.getItem(id) ?? '';
+                    } catch (e) {
+                        // ?
+                    }
+                    return draft;
+                }
+
+                setDraft(content = '') {
+                    const id = this.id;
+
+                    try {
+                        localStorage.setItem(id, content);
+                    } catch (e) {
+                        if (e instanceof DOMException && e.code == e.QUOTA_EXCEEDED_ERR) {
+                            console.error("Could not save local draft", e)
+                        } else {
+                            throw (e);
+                        }
+                    }
+                }
+
+                saveDraft() {
+                    const contents = this.getContents();
+                    this.setDraft(contents);
+                }
+
+                loadDraft() {
+                    const draft = this.getDraft();
+                    this.setContents(draft);
+                }
+
+                editorIsEmpty() {
+                    return this.quill.getText().trim().length == 0;
+                }
+            }
+            QuillLocalDraft.DEFAULT_OPTIONS = {
+                id: '',
+                prefix: 'quill_local_draft',
+                saveDelay: 1000,
+                displaySave: true,
+                bindInitial: true
+            }
+
+            Quill.register({ 'modules/localDraft': QuillLocalDraft });
+
+            const previewEl = document.getElementById('preview-image');
+            const CANVAS_WIDTH = previewEl.getAttribute('width');
+            const CANVAS_HEIGHT = previewEl.getAttribute('height');
+
+            const canvas = new OffscreenCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
+            const ctx = canvas.getContext('2d');
+
+            const templates = {}
+            for (const el of document.querySelectorAll('[data-template]')) {
+                const templateId = el.getAttribute('data-template');
+                el.style.background = `radial-gradient(${templateId} 0%, rgb(from ${templateId} r g b / 0.5) 100%)`;
+
+                const background = new Promise((res) => {
+                    const im = new Image();
+                    im.src = `assets/bg_${templateId}.png`;
+                    im.fetchPriority = el.classList.contains('active') ? 'high' : 'low';
+                    im.onload = function () {
+                        res(im);
+                    };
+                });
+
+                templates[templateId] = {
+                    background,
+                    renderBackground: async (ctx) => {
+                        ctx.fillStyle = ctx.createPattern(await background, 'no-repeat');
+                        ctx.rect(0, 0, canvas.width, canvas.height);
+                        ctx.fill();
+                    },
+                    heading: {
+                        font: {
+                            size: [80, 76, 72, 68, 64, 60, 58, 54],
+                            style: '700',
+                            family: 'Piazzolla',
+                        },
+                        containerHeight: 200,
+                        lineHeight: 1.1,
+                        color: '#ffffff',
+                        y: 360,
+                    },
+                    body: {
+                        font: {
+                            size: [54, 50, 46, 42, 38, 34, 30],
+                            style: '400',
+                            family: 'Roboto',
+                        },
+                        containerHeight: 640,
+                        lineHeight: 1.5,
+                        color: '#f0f0f0',
+                        y: 600,
+                    },
+                };
+            }
+
+            let currentTemplate = document.querySelector('[data-template].active').getAttribute('data-template');
+
+            const headingQuill = new Quill('#heading-editor', {
+                theme: 'snow',
+                formats: [],
+                modules: {
+                    toolbar: null,
+                    localDraft: {
+                        id: 'heading',
+                    },
+                },
+            });
+
+            const bodyQuill = new Quill('#body-editor', {
+                theme: 'snow',
+                formats: ['bold', 'italic', 'underline', 'color', 'align'],
+                modules: {
+                    toolbar: [
+                        ['bold', 'italic', 'underline'],
+                        [{ 'color': [] }],
+                        [{ 'align': [] }]
+                    ],
+                    localDraft: {
+                        id: 'body',
+                    },
+                },
+            });
+
+            const Delta = Quill.import('delta');
+            headingQuill.updateContents(new Delta().insert('Εδώ θα βρίσκεται ο τίτλος της δημοσίευσης'));
+            bodyQuill.updateContents(new Delta()
+                .insert('Επειδή μέχρι τώρα κανένας στρατός και κανένα εξοπλιστικό πρόγραμμα δεν απέτρεψε μία τοπική ή παγκόσμια πολεμική σύρραξη, αλλά αντίθετα από τη φύση του στάθηκε ενάντια στην κοινωνία και την οικολογική ισορροπία του πλανήτη, ανίκανος να διαφυλάξει την ειρήνη.')
+                .insert('\n\n', { align: 'justify' })
+                .insert('Δεν αποδέχομαι να ενταχθώ και να υποστηρίξω μηχανισμούς που με φέρνουν σε βαθιά αντίθεση με τη συνείδησή μου.')
+                .insert('\n', { align: 'justify' })
+            );
+
+            // Parse Quill ops into blocks (lines with alignment)
+            function parseOpsIntoBlocks(ops) {
+                const blocks = [];
+                let currentBlock = {
+                    segments: [],
+                    align: 'left' // default alignment
+                };
+
+                for (const op of ops) {
+                    const text = op.insert || '';
+
+                    // Check if this op contains newline(s)
+                    if (text.includes('\n')) {
+                        const parts = text.split('\n');
+
+                        for (let i = 0; i < parts.length; i++) {
+                            // Add the text before the newline to current block
+                            if (parts[i]) {
+                                currentBlock.segments.push({
+                                    text: parts[i],
+                                    bold: op.attributes?.bold,
+                                    italic: op.attributes?.italic,
+                                    color: op.attributes?.color
+                                });
+                            }
+
+                            // If this is not the last part, we have a newline
+                            if (i < parts.length - 1) {
+                                // The alignment comes from the newline's attributes
+                                currentBlock.align = op.attributes?.align || 'left';
+                                blocks.push(currentBlock);
+                                currentBlock = {
+                                    segments: [],
+                                    align: 'left'
+                                };
+                            }
+                        }
+
+                        // If text ends with newline, the last part is empty and we already pushed
+                        // The alignment for ending newline is preserved in op.attributes
+                        if (text.endsWith('\n')) {
+                            currentBlock.align = op.attributes?.align || 'left';
+                        }
+                    } else {
+                        // No newline, just add text to current block
+                        currentBlock.segments.push({
+                            text: text,
+                            bold: op.attributes?.bold,
+                            italic: op.attributes?.italic,
+                            color: op.attributes?.color
+                        });
+                    }
+                }
+
+                // Add any remaining content (though Quill should always end with \n)
+                if (currentBlock.segments.length > 0) {
+                    blocks.push(currentBlock);
+                }
+
+                return blocks;
+            }
+
+            function wrapAndRenderBlocks({ ctx, blocks, x, y, maxWidth, lineHeight, fontConfig, baseColor, containerHeight }) {
+                let currentY = y;
+
+                function calculateHeight(font) {
+                    let lines = 0;
+
+                    const lastNonEmptyBlockIdx = blocks.findLastIndex(block => block.segments.length);
+                    blocks = blocks.slice(0, lastNonEmptyBlockIdx + 1);
+
+                    for (const block of blocks) {
+                        lines += wrapBlockSegments({
+                            ctx,
+                            segments: block.segments,
+                            maxWidth,
+                            baseFont: font,
+                            baseColor,
+                        }).length;
+                    }
+
+                    return lines * lineHeight * font.size;
+                }
+
+                function convergeFont() {
+                    const fontCandidates = fontConfig.size.map(size => ({
+                        ...fontConfig,
+                        size,
+                    }));
+
+                    for (const font of fontCandidates) {
+                        if (calculateHeight(font) <= containerHeight) {
+                            return font;
+                        }
+                    }
+
+                    // return last candidate if none fulfilled the height criterion
+                    return fontCandidates.at(-1);
+                }
+
+                let font = convergeFont();
+
+                for (const block of blocks) {
+                    const wrappedLines = wrapBlockSegments({
+                        ctx,
+                        segments: block.segments,
+                        maxWidth,
+                        baseFont: font,
+                        baseColor,
+                    });
+
+                    // Render each wrapped line with the block's alignment
+                    wrappedLines.forEach((wrappedLine, i) => {
+                        let resolvedAlign = block.align;
+                        if (resolvedAlign === 'justify' && i === wrappedLines.length - 1) {
+                            resolvedAlign = 'left';
+                        }
+
+                        renderLine({ ctx, segments: wrappedLine, x, y: currentY, maxWidth, align: resolvedAlign });
+                        currentY += lineHeight * font.size;
+                    });
+                }
+            }
+
+            function wrapBlockSegments({ ctx, segments, maxWidth, baseFont, baseColor }) {
+                const wrappedLines = [];
+                let currentLine = [];
+                let currentWidth = 0;
+
+                for (const seg of segments) {
+                    const text = seg.text || '';
+                    const words = text.split(' ');
+
+                    for (let i = 0; i < words.length; i++) {
+                        const word = words[i] + (i < words.length - 1 ? ' ' : '');
+
+                        // Apply formatting
+                        let font = { ...baseFont };
+                        if (seg.bold && seg.italic) {
+                            font.style = 'italic 900';
+                        } else if (seg.bold) {
+                            font.style = '900';
+                        } else if (seg.italic) {
+                            font.style = 'italic 400';
+                        } else {
+                            font.style = '400';
+                        }
+
+                        ctx.font = `${font.style} ${font.size}px "${font.family}"`;
+                        const wordWidth = ctx.measureText(word).width;
+
+                        if (currentWidth + wordWidth > maxWidth && currentLine.length > 0) {
+                            wrappedLines.push([...currentLine]);
+                            currentLine = [];
+                            currentWidth = 0;
+                        }
+
+                        currentLine.push({
+                            text: word,
+                            font,
+                            color: seg.color || baseColor,
+                            width: wordWidth
+                        });
+                        currentWidth += wordWidth;
+                    }
+                }
+
+                wrappedLines.push(currentLine);
+                return wrappedLines;
+            }
+
+            function renderLine({ ctx, segments, x, y, maxWidth, align }) {
+                if (!segments.length) {
+                    // this is just a new line
+                    return;
+                }
+
+                const totalWidth = segments.reduce((sum, seg) => sum + seg.width, 0);
+                let currentX;
+
+                switch (align) {
+                    case 'left':
+                        currentX = x - maxWidth / 2;
+                        break;
+                    case 'right':
+                        currentX = x + maxWidth / 2 - totalWidth;
+                        break;
+                    case 'center':
+                        currentX = x - totalWidth / 2;
+                        break;
+                    case 'justify':
+                        currentX = x - maxWidth / 2;
+                        const extraSpace = (maxWidth - totalWidth) / (segments.length - 1);
+                        for (const seg of segments) {
+                            ctx.font = `${seg.font.style} ${seg.font.size}px "${seg.font.family}"`;
+                            ctx.fillStyle = seg.color;
+                            ctx.fillText(seg.text, currentX, y);
+                            currentX += seg.width + extraSpace;
+                        }
+                        return;
+                    default:
+                        currentX = x - totalWidth / 2;
+                }
+
+                ctx.textAlign = 'left';
+                ctx.textBaseline = 'middle';
+
+                for (const seg of segments) {
+                    ctx.font = `${seg.font.style} ${seg.font.size}px "${seg.font.family}"`;
+                    ctx.fillStyle = seg.color;
+                    ctx.fillText(seg.text, currentX, y);
+                    currentX += seg.width;
+                }
+            }
+
+            async function _renderCanvas() {
+                const template = templates[currentTemplate];
+
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                await template.renderBackground(ctx);
+
+                const headingContents = headingQuill.getContents();
+                const bodyContents = bodyQuill.getContents();
+
+                // Parse ops into blocks with alignment
+                const headingBlocks = parseOpsIntoBlocks(headingContents.ops.map((op) => ({ ...op, attributes: { ...op.attributes, align: 'center' } })));
+                const bodyBlocks = parseOpsIntoBlocks(bodyContents.ops);
+
+                ctx.textAlign = 'left';
+                ctx.textBaseline = 'middle';
+
+                wrapAndRenderBlocks({
+                    ctx,
+                    blocks: headingBlocks,
+                    x: canvas.width / 2,
+                    y: template.heading.y,
+                    maxWidth: canvas.width - 160,
+                    fontConfig: template.heading.font,
+                    lineHeight: template.heading.lineHeight,
+                    baseColor: template.heading.color,
+                    containerHeight: template.heading.containerHeight,
+                });
+
+                wrapAndRenderBlocks({
+                    ctx,
+                    blocks: bodyBlocks,
+                    x: canvas.width / 2,
+                    y: template.body.y,
+                    maxWidth: canvas.width - 200,
+                    fontConfig: template.body.font,
+                    lineHeight: template.body.lineHeight,
+                    baseColor: template.body.color,
+                    containerHeight: template.body.containerHeight,
+                });
+
+                canvas.convertToBlob().then((blob) => {
+                    previewEl.src = URL.createObjectURL(blob);
+                    previewEl.style.opacity = '100%';
+                });
+            }
+
+            const _debouncedRenderCanvas = debounce(_renderCanvas, 500);
+
+            function renderCanvas() {
+                previewEl.style.opacity = '50%';
+                _debouncedRenderCanvas();
+            }
+
+            document.querySelectorAll('.template-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.template-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentTemplate = btn.dataset.template;
+                    renderCanvas();
+                });
+            });
+
+            headingQuill.on('text-change', renderCanvas);
+            bodyQuill.on('text-change', renderCanvas);
+
+            document.querySelector('.share-btn').addEventListener('click', () => {
+                canvas.convertToBlob().then((blob) => {
+                    if (navigator?.share) {
+                        navigator.share({ files: [blob] }).catch((err) => alert(err.message));
+                    }
+                })
+            });
+
+            document.querySelector('.download-btn').addEventListener('click', () => {
+                const link = document.createElement('a');
+                link.download = 'social-image.png';
+                canvas.convertToBlob().then((blob) => {
+                    link.href = URL.createObjectURL(blob);
+                    link.click();
+                });
+            });
+
+            renderCanvas();
+        </script>
+    </body>
+
+</html>
