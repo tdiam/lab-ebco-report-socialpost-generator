@@ -325,7 +325,7 @@
       Quill.register({ 'modules/localDraft': QuillLocalDraft });
 
       const previewEl = document.getElementById('preview-image');
-      const DEBUG = false;
+      const DEBUG = new URL(window.location.href).searchParams.has('debug');
       const CANVAS_WIDTH = previewEl.getAttribute('width');
       const CANVAS_HEIGHT = previewEl.getAttribute('height');
 
