@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Post Templates</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@yohns/yoselect@0.1.2/yoSelect.css"
+    />
+    <style>
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+      }
+      .template-card {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        position: relative;
+      }
+      .template-card img {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: var(--pico-border-radius);
+        display: block;
+      }
+      .template-card:hover::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+      }
+      .template-card .overlay-hover {
+        opacity: 0;
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+      }
+      .template-card .overlay-hover span {
+        background: black;
+        padding: 0 0.5em;
+      }
+      .template-card:hover .overlay-hover {
+        opacity: 1;
+      }
+      #no-results {
+        grid-column: 1 / -1;
+        text-align: center;
+        color: var(--pico-muted-color);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1>EBCO Annual Report 2025 &ndash; Social media kit</h1>
+      <select id="lang-select" data-yo-search="true" data-yo-close-on-select>
+        <option value="en-UK" selected>English</option>
+        <option value="fr-FR">French</option>
+        <option value="es-ES">Spanish</option>
+        <option value="de-DE">German</option>
+      </select>
+      <div class="gallery-grid" id="gallery"></div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@yohns/yoselect@0.1.2/yoSelect.js"></script>
+    <script>
+      const TEMPLATES = [
+        {
+          id: 'quote_1',
+          background: './assets/quote_1.png',
+        },
+        {
+          id: 'quote_2',
+          background: './assets/quote_2.png',
+        },
+        {
+          id: 'quote_3',
+          background: './assets/quote_3.png',
+        },
+      ];
+
+      const gallery = document.getElementById('gallery');
+      const langSelect = document.getElementById('lang-select');
+
+      const cache = {};
+
+      async function loadLang(locale) {
+        if (!cache[locale]) {
+          const res = await fetch(`./data/lang/${locale}.json`);
+          cache[locale] = await res.json();
+        }
+        return cache[locale];
+      }
+
+      function getCurrentLanguage() {
+        return langSelect.querySelector(`[value="${langSelect.value}"]`)
+          ?.innerText;
+      }
+
+      function buildUrl(translation) {
+        const serialized = {};
+        for (const [key, val] of Object.entries(translation)) {
+          const parts = val.split(/<strong>([^<]*)<\/strong>/);
+          if (parts.length === 1) {
+            serialized[key] = val;
+          } else {
+            const ops = [];
+            for (let i = 0; i < parts.length; i += 2) {
+              ops.push({
+                insert: parts[i],
+              });
+
+              if (i + 1 < parts.length) {
+                ops.push({
+                  insert: parts[i + 1],
+                  attributes: { bold: true },
+                });
+              }
+            }
+
+            serialized[key] = JSON.stringify(ops);
+          }
+        }
+
+        const params = new URLSearchParams(serialized);
+        return `./quote?${params.toString()}`;
+      }
+
+      async function render(translationsLoader) {
+        gallery.innerHTML = '';
+        const translations = await translationsLoader();
+        for (const template of TEMPLATES) {
+          const translation = translations[template.id];
+          if (!translation) continue;
+          const a = document.createElement('a');
+          a.className = 'template-card';
+          a.href = buildUrl(translation);
+          a.innerHTML = `
+            <img src="${template.background}" alt="" />
+            <div class="overlay-hover"><span>View and edit<br/>in ${getCurrentLanguage()}</span></div>
+          `;
+          gallery.appendChild(a);
+        }
+      }
+
+      new YoSelect(langSelect, {
+        search: true,
+        searchPlaceholder: 'Search language…',
+      });
+
+      langSelect.addEventListener('change', async (e) => {
+        render(() => loadLang(e.target.value));
+      });
+
+      render(() => loadLang('en-UK'));
+    </script>
+  </body>
+</html>
