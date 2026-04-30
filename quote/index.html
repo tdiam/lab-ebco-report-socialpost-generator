@@ -762,10 +762,19 @@
         const u = new URL(window.location.href);
         for (const [name, e] of Object.entries(editables)) {
           if (u.searchParams.has(name)) {
+            const raw = u.searchParams.get(name);
+            let ops = null;
+            try {
+              const parsed = JSON.parse(raw);
+              if (Array.isArray(parsed)) ops = parsed;
+            } catch (_) {}
+
             e.quill.setContents([]);
-            e.quill.updateContents(
-              new Delta().insert(u.searchParams.get(name)),
-            );
+            if (ops) {
+              e.quill.updateContents(new Delta(ops));
+            } else {
+              e.quill.updateContents(new Delta().insert(raw));
+            }
           }
         }
       }
