@@ -524,7 +524,7 @@
         const blocks = [];
         let currentBlock = {
           segments: [],
-          align: 'left', // default alignment
+          align: null,
         };
 
         for (const op of ops) {
@@ -546,7 +546,7 @@
               // If this is not the last part, we have a newline
               if (i < parts.length - 1) {
                 // The alignment comes from the newline's attributes
-                currentBlock.align = op.attributes?.align || 'left';
+                currentBlock.align = op.attributes?.align || null;
                 blocks.push(currentBlock);
                 currentBlock = {
                   segments: [],
@@ -558,7 +558,7 @@
             // If text ends with newline, the last part is empty and we already pushed
             // The alignment for ending newline is preserved in op.attributes
             if (text.endsWith('\n')) {
-              currentBlock.align = op.attributes?.align || 'left';
+              currentBlock.align = op.attributes?.align || null;
             }
           } else {
             // No newline, just add text to current block
@@ -650,7 +650,7 @@
 
           // Render each wrapped line with the block's alignment
           wrappedLines.forEach((wrappedLine, i) => {
-            let resolvedAlign = block.align ?? align;
+            let resolvedAlign = block.align ?? align ?? 'left';
             if (resolvedAlign === 'justify' && i === wrappedLines.length - 1) {
               resolvedAlign = 'left';
             }
