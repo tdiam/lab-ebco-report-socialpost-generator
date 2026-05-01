@@ -295,25 +295,29 @@
         langSelect.value = initialLocale;
       }
 
-      new YoSelect(langSelect, {
+      const yoSelect = new YoSelect(langSelect, {
         search: true,
         searchPlaceholder: 'Search country…',
       });
 
-      langSelect.addEventListener('change', async (e) => {
+      async function onChange(e) {
         const locale = e.target.value;
         const url = new URL(window.location.href);
         url.searchParams.set('locale', locale);
         window.history.pushState({ locale }, '', url);
         render(() => loadPack(locale));
-      });
+      }
+
+      langSelect.addEventListener('change', onChange);
 
       // Handle browser back/forward navigation
       window.addEventListener('popstate', (e) => {
         const locale = e.state?.locale ?? new URLSearchParams(window.location.search).get('locale') ?? 'en-GB';
-        langSelect.value = locale;
-        langSelect.dispatchEvent(new Event('change', { bubbles: true }));
+
+        langSelect.removeEventListener('change', onChange);
+        yoSelect.setValue(locale);
         render(() => loadPack(locale));
+        langSelect.addEventListener('change', onChange);
       });
 
       render(() => loadPack(initialLocale));
