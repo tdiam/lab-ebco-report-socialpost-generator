@@ -248,7 +248,7 @@
         },
         ebco: {
           font: {
-            size: [36, 32, 28],
+            size: [36, 32, 28, 20],
             style: '400',
             family: 'Noto Sans',
           },
@@ -265,50 +265,52 @@
             style: '700',
             family: 'Noto Sans',
           },
+          containerWidth: 360,
           containerHeight: 100,
           lineHeight: 1.1,
-          color: 'white',//#38519e',
-          x: 300,
-          y: 660,
+          color: '#38519e',
+          x: 462,
+          y: 694,
           align: 'center',
         },
         visit: {
           font: {
-            size: [30],
-            style: '700',
+            size: [32, 28, 24],
+            style: '400',
             family: 'Noto Sans',
           },
-          containerHeight: 45,
+          containerWidth: 550,
+          containerHeight: 60,
           lineHeight: 1.5,
           color: '#ffffff',
-          x: 980,
-          y: 940,
+          x: 300,
+          y: 820,
         },
         covers: {
           font: {
-            size: [30],
+            size: [28],
             style: '700',
             family: 'Noto Sans',
-            highlight: true,
           },
           containerHeight: 45,
           lineHeight: 1.5,
           color: '#38519e',
-          x: 980,
-          y: 980,
+          x: 600,
+          y: 990,
+          align: 'center',
         },
         moreinfo: {
           font: {
-            size: [30],
+            size: [24],
             style: '700',
             family: 'Noto Sans',
-            highlight: true,
           },
           containerHeight: 45,
           lineHeight: 1.5,
           color: '#38519e',
-          x: 980,
-          y: 980,
+          x: 600,
+          y: 1100,
+          align: 'center',
         },
       };
 
@@ -443,7 +445,8 @@
       }) {
         if (DEBUG) {
           ctx.strokeStyle = '#ff0000';
-          ctx.strokeRect(x, y, maxWidth, containerHeight);
+          const leftX = align === 'center' ? (x - maxWidth / 2) : x;
+          ctx.strokeRect(leftX, y, maxWidth, containerHeight);
         }
 
         function calculateHeight(font) {
@@ -624,7 +627,7 @@
             blocks: [{ align: 'left', ...txt.block }],
             x: template[name].x,
             y: template[name].y,
-            maxWidth: template[name].containerWidth,
+            maxWidth: template[name].containerWidth ?? canvas.width,
             fontConfig: template[name].font,
             lineHeight: template[name].lineHeight,
             baseColor: template[name].color,
@@ -642,7 +645,7 @@
             blocks,
             x: template[name].x,
             y: template[name].y,
-            maxWidth: template[name].containerWidth,
+            maxWidth: template[name].containerWidth ?? canvas.width,
             fontConfig: template[name].font,
             lineHeight: template[name].lineHeight,
             baseColor: template[name].color,
