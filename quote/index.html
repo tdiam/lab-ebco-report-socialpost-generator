@@ -192,137 +192,6 @@
       import debounce from 'https://cdn.jsdelivr.net/npm/debounce@3.0.0/+esm';
       import { throttle } from 'https://cdn.jsdelivr.net/npm/throttle-debounce@3.0.1/+esm';
 
-      class QuillLocalDraft {
-        quill;
-        options;
-        listener;
-        initialized;
-
-        constructor(quill, options) {
-          this.quill = quill;
-          this.options = this.applyOptions(options);
-
-          /*
-            Quill start's up with a DOM load and then overwrites the editor, so we can't load the draft just yet.
-            Unfortunately, there's no reliable hook either... the text editor change event
-            doesn't get called unless there's predefined HTML content. So we rely on application-specific
-            initialization.
-            */
-          this.initialized = false;
-          if (this.options.bindInitial) this.bindInitialListener();
-        }
-
-        init() {
-          if (this.initialized) return;
-
-          this.initialized = true;
-          this.unbindListener();
-          this.loadDraft();
-          this.bindListener();
-        }
-
-        bindInitialListener() {
-          if (this.initialized) return this.bindListener();
-
-          this.unbindListener();
-
-          const listener = () => this.init();
-          this.listener = listener;
-
-          this.quill.once('text-change', this.listener);
-        }
-
-        bindListener() {
-          this.unbindListener();
-
-          const listener = () => this.saveDraft();
-          this.listener = this.options.saveDelay
-            ? throttle(this.options.saveDelay, listener)
-            : listener;
-
-          this.quill.on('text-change', this.listener);
-        }
-
-        unbindListener() {
-          if (!this.listener) return;
-
-          this.quill.off('text-change', this.listener);
-        }
-
-        applyOptions(options) {
-          return {
-            ...QuillLocalDraft.DEFAULT_OPTIONS,
-            ...options,
-          };
-        }
-
-        get id() {
-          return (this.options.prefix ?? '') + '_' + this.options.id;
-        }
-
-        getContents() {
-          return JSON.stringify(this.quill.getContents());
-        }
-
-        setContents(contents) {
-          let deserialized = null;
-          try {
-            deserialized = JSON.parse(contents);
-          } catch (e) {
-            console.error('Could not parse local draft Delta.');
-            return;
-          }
-          if (deserialized) this.quill.setContents(deserialized);
-        }
-
-        getDraft() {
-          const id = this.id;
-          let draft = '';
-          try {
-            draft = localStorage.getItem(id) ?? '';
-          } catch (e) {
-            // ?
-          }
-          return draft;
-        }
-
-        setDraft(content = '') {
-          const id = this.id;
-
-          try {
-            localStorage.setItem(id, content);
-          } catch (e) {
-            if (e instanceof DOMException && e.code == e.QUOTA_EXCEEDED_ERR) {
-              console.error('Could not save local draft', e);
-            } else {
-              throw e;
-            }
-          }
-        }
-
-        saveDraft() {
-          const contents = this.getContents();
-          this.setDraft(contents);
-        }
-
-        loadDraft() {
-          const draft = this.getDraft();
-          this.setContents(draft);
-        }
-
-        editorIsEmpty() {
-          return this.quill.getText().trim().length == 0;
-        }
-      }
-      QuillLocalDraft.DEFAULT_OPTIONS = {
-        id: '',
-        prefix: 'quill_local_draft',
-        saveDelay: 1000,
-        displaySave: true,
-        bindInitial: true,
-      };
-
-      Quill.register({ 'modules/localDraft': QuillLocalDraft });
 
       const previewEl = document.getElementById('preview-image');
       const DEBUG = new URL(window.location.href).searchParams.has('debug');
@@ -431,9 +300,6 @@
             formats: [],
             modules: {
               toolbar: null,
-              localDraft: {
-                id: 'heading',
-              },
             },
           }),
         },
@@ -443,9 +309,6 @@
             formats: ['bold'],
             modules: {
               toolbar: [['bold']],
-              localDraft: {
-                id: 'body',
-              },
             },
           }),
         },
@@ -455,9 +318,6 @@
             formats: [],
             modules: {
               toolbar: null,
-              localDraft: {
-                id: 'credit-title',
-              },
             },
           }),
         },
@@ -752,12 +612,6 @@
 
       const Delta = Quill.import('delta');
 
-      function initFromLocal() {
-        for (const e of Object.values(editables)) {
-          e.quill.getModule('localDraft').init();
-        }
-      }
-
       function initFromUrl() {
         const u = new URL(window.location.href);
         for (const [name, e] of Object.entries(editables)) {
@@ -785,7 +639,6 @@
         }
       }
 
-      initFromLocal();
       initFromUrl();
       bindListeners();
 
