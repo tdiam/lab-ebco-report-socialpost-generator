@@ -16,7 +16,7 @@
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for the United Kingdom:"
+    "concerns": "Principal concerns for Cyprus (TRNC):"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
