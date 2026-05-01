@@ -33,11 +33,15 @@
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "1. Military-themed programmes form obligatory parts of the education curriculum (Day of Defence and Citizenship)."
+      "body": "Immediate release is called for all conscientious objectors currently imprisoned, detained, or convicted solely for their religion or belief.\n\nStalling of proposed legislation for alternative non-military service during wartime."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "2. Plans for reintroduction of conscription."
+      "body": "Objectors face severe persecution, discrimination, torture, and hostile media campaigns, Supreme Court rulings treat conscientious objection as draft evasion, disobedience and a criminal offence, and appeals to Constitutional Court suffer judicial delays.\n\nViolent \"busification\" (forcible conscription) practices and military registration enforcement by Territorial Conscription Centers (TCC) and police lead to arbitrary detentions incommunicado, beatings, cruel treatment and deaths, restrictions in access to work, education, and public services."
+    },
+    {
+      "$parent": "_concerns_quote",
+      "body": "Russian occupation involves military recruitment and forced indoctrination measures violating IHL and detentions of Jehovah's Witnesses."
     }
   ]
 }

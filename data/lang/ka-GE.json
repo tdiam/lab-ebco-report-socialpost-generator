@@ -33,11 +33,11 @@
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "1. Military-themed programmes form obligatory parts of the education curriculum (Day of Defence and Citizenship)."
+      "body": "Strict time limitations for raising conscientious objection claims, first-stage consideration by military conscription commissions and lack of clear safeguards against arbitrary denials.\n\nPunitive and discriminatory length of the alternative civilian service.\n\nNo specific provisions for professional members of the armed forces."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "2. Plans for reintroduction of conscription."
+      "body": "Juvenile military training involving the handling of firearms.\n\nDeportation of Russian antiwar activist Nikolai Belikov."
     }
   ]
 }

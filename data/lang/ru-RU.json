@@ -33,11 +33,11 @@
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "1. Military-themed programmes form obligatory parts of the education curriculum (Day of Defence and Citizenship)."
+      "body": "Alternative civilian service is punitive and discriminatory, inter alia, in terms of duration.\n\nNo right to conscientious objection exists for serving military personnel, mobilised persons, or reservists.\n\nForced recruitment of vulnerable groups and foreign nationals into military service. Systematic coercion of conscripts to sign military contracts through deception, threats, and violence."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "2. Plans for reintroduction of conscription."
+      "body": "Repression against human rights defenders assisting conscientious objectors, Elena Popova, Maria Bontsler, Artem Klyga."
     }
   ]
 }

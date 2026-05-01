@@ -33,11 +33,7 @@
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "1. Military-themed programmes form obligatory parts of the education curriculum (Day of Defence and Citizenship)."
-    },
-    {
-      "$parent": "_concerns_quote",
-      "body": "2. Plans for reintroduction of conscription."
+      "body": "No recognition of the right to conscientious objection exists for those enlisted in voluntary service, reserve service, or the military personnel."
     }
   ]
 }

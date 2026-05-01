@@ -33,11 +33,15 @@
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "1. Military-themed programmes form obligatory parts of the education curriculum (Day of Defence and Citizenship)."
+      "body": "Alternative service is punitive and discriminatory in terms of longer duration (more than 2x that of military service).\n\nPoor availability of information about the right to conscientious objection.\n\nReports that conscripts are deterred by military officers from applying to be transferred to alternative service."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "2. Plans for reintroduction of conscription."
+      "body": "Plans to reform non-military service and steer towards “comprehensive security” and “preparedness”. Plans to introduce an obligatory national defence day for 17 year-olds. Military courses already offered to 16-17 year-olds."
+    },
+    {
+      "$parent": "_concerns_quote",
+      "body": "No full guarantee of international protection for conscientious objectors to military service who are at risk of persecution in their country of origin."
     }
   ]
 }

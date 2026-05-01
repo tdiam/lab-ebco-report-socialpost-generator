@@ -33,11 +33,11 @@
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "1. Military-themed programmes form obligatory parts of the education curriculum (Day of Defence and Citizenship)."
+      "body": "Although conscription is suspended, Poland has provisions whereby civilians may be allocated to perform “personal services for defence,” under the direction of the military in the event of war or general mobilisation.\n\n“Security education”, including marksmanship is a compulsory part of the secondary school curriculum.\n\nDefence programmes presented by military personnel are offered in schools, including primary schools."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "2. Plans for reintroduction of conscription."
+      "body": "No explicit provisions exist for the release of serving military personnel or reservists who develop conscientious objections. Prosecutions may result from refusing on grounds of conscience to comply with call-up to reserve service."
     }
   ]
 }

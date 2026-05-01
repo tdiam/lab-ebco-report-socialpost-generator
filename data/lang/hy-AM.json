@@ -33,11 +33,11 @@
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "1. Military-themed programmes form obligatory parts of the education curriculum (Day of Defence and Citizenship)."
+      "body": "Alternative service is punitive and discriminatory, inter alia, in terms of longer duration and insufficient compensation.\n\nConscientious objectors are subjected to inquiry and are discriminated against when applying on ideological grounds.\n\nNo recognition of the right to conscientious objection during or after military service."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "2. Plans for reintroduction of conscription."
+      "body": "Military-themed activities take place in schools with the involvement of the Armed Forces."
     }
   ]
 }

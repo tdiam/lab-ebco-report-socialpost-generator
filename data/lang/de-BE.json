@@ -33,11 +33,11 @@
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "1. Military-themed programmes form obligatory parts of the education curriculum (Day of Defence and Citizenship)."
+      "body": "No recognition of the right to conscientious objection for professional soldiers or reservists.\n\nExposure of minors to military programs and training."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "2. Plans for reintroduction of conscription."
+      "body": "No full guarantee of international protection for conscientious objectors to military service who are at risk of persecution in their country of origin."
     }
   ]
 }

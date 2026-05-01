@@ -33,11 +33,11 @@
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "1. Military-themed programmes form obligatory parts of the education curriculum (Day of Defence and Citizenship)."
+      "body": "No release of professional soldiers, on grounds of conscience, including during a state of emergency.\n\nMilitarisation of education and no updated information on the implementation of the recommendation of the Committee on the Rights of the Child to “ensure that children are not subjected to military training that involves the use of firearms."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "2. Plans for reintroduction of conscription."
+      "body": "No full guarantee of international protection for conscientious objectors to military service who are at risk of persecution in their country of origin."
     }
   ]
 }

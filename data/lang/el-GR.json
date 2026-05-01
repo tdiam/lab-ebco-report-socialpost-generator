@@ -33,11 +33,11 @@
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "1. Military-themed programmes form obligatory parts of the education curriculum (Day of Defence and Citizenship)."
+      "body": "Alternative service is punitive and discriminatory, inter alia, in terms of longer duration, discriminatory geographical restrictions, compensation being below the poverty threshold, and remains under the supervision of the Ministry of Defence.\n\nConscientious objectors are subjected to inquiry and are discriminated against when applying on ideological grounds. The process has yet to be placed under the full control of civilian authorities."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "2. Plans for reintroduction of conscription."
+      "body": "Punishment of certain categories of conscientious objectors continues, in violation of international law. Such punishment may also be repeated in violation of ne bis in idem.\n\nNon-compliance to the UN Human Rights Committee decision on Petromelidis v. Greece."
     }
   ]
 }

@@ -33,11 +33,7 @@
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "1. Military-themed programmes form obligatory parts of the education curriculum (Day of Defence and Citizenship)."
-    },
-    {
-      "$parent": "_concerns_quote",
-      "body": "2. Plans for reintroduction of conscription."
+      "body": "The alternative service is punitive and discriminatory, inter alia, in terms of its nature, cost, and duration.\n\nConscientious objectors are not recognised prima facie. The process has yet to be placed under the full control of civilian authorities."
     }
   ]
 }

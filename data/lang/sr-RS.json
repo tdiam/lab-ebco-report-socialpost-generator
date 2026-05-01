@@ -33,11 +33,11 @@
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "1. Military-themed programmes form obligatory parts of the education curriculum (Day of Defence and Citizenship)."
+      "body": "155-days military service without weapons replacing 75 days of armed service, discussed as arrangement for conscientious objectors after reintroduction of conscription planned in 2027 or 2028, does not satisfy human rights standards"
     },
     {
       "$parent": "_concerns_quote",
-      "body": "2. Plans for reintroduction of conscription."
+      "body": "It is unclear if and how the law on alternative service would apply to an event of reintroduction of conscription or emergency mobilisation.\n\nThe law on alternative service lacks basic guarantees to the rights of conscientious objectors, such as accessibility to all without discrimination, full control of civilian authorities."
     }
   ]
 }
