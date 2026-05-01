@@ -1,17 +1,18 @@
 {
-  "quote_1": {
+  "quote": {
     "heading": "El Liderazgo Importa",
-    "body": "Las grandes cosas en los negocios nunca las hace una sola persona.",
     "creditTitle": "CEO, Ebco"
   },
+  "quote_1": {
+    "$parent": "quote",
+    "body": "Las grandes cosas en los negocios nunca las hace una sola persona."
+  },
   "quote_2": {
-    "heading": "Innovación Primero",
-    "body": "La única manera de hacer un gran trabajo es amar lo que haces.",
-    "creditTitle": "CTO, Ebco"
+    "$parent": "quote",
+    "body": "La única manera de hacer un gran trabajo es amar lo que haces."
   },
   "quote_3": {
-    "heading": "Construir Juntos",
-    "body": "Solos podemos hacer tan poco; juntos podemos hacer tanto.",
-    "creditTitle": "COO, Ebco"
+    "$parent": "quote",
+    "body": "Solos podemos hacer tan poco; juntos podemos hacer tanto."
   }
 }

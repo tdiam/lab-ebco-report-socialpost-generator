@@ -106,11 +106,12 @@
 
       const cache = {};
 
-      async function loadLang(locale) {
+      async function loadPack(locale) {
         if (!cache[locale]) {
           const res = await fetch(`./data/lang/${locale}.json`);
           cache[locale] = await res.json();
         }
+
         return cache[locale];
       }
 
@@ -148,20 +149,31 @@
         return `./${template}?${params.toString()}`;
       }
 
+      function makeLink(template, translation) {
+        const a = document.createElement('a');
+        a.className = 'template-card';
+        a.href = buildUrl(template.template, translation);
+        a.innerHTML = `
+          <img src="${template.background}" alt="" />
+          <div class="overlay-hover"><span>View and edit<br/>in ${getCurrentLanguage()}</span></div>
+        `;
+        return a;
+      }
+
       async function render(translationsLoader) {
         gallery.innerHTML = '';
+
         const translations = await translationsLoader();
+        const resolveTranslation = (t) => {
+          const { $parent, ...rest } = t;
+          const parentData = $parent ? resolveTranslation(translations[$parent]) : {}
+          return { ...parentData, ...rest }
+        }
+
         for (const template of TEMPLATES) {
-          const translation = translations[template.id];
+          const translation = resolveTranslation(translations[template.id]);
           if (!translation) continue;
-          const a = document.createElement('a');
-          a.className = 'template-card';
-          a.href = buildUrl(template.template, translation);
-          a.innerHTML = `
-            <img src="${template.background}" alt="" />
-            <div class="overlay-hover"><span>View and edit<br/>in ${getCurrentLanguage()}</span></div>
-          `;
-          gallery.appendChild(a);
+          gallery.appendChild(makeLink(template, translation));
         }
       }
 
@@ -171,10 +183,10 @@
       });
 
       langSelect.addEventListener('change', async (e) => {
-        render(() => loadLang(e.target.value));
+        render(() => loadPack(e.target.value));
       });
 
-      render(() => loadLang('en-UK'));
+      render(() => loadPack('en-UK'));
     </script>
   </body>
 </html>
