@@ -13,6 +13,13 @@
       href="https://cdn.jsdelivr.net/npm/@yohns/yoselect@0.1.2/yoSelect.css"
     />
     <style>
+      .yo-select {
+        --pico-block-spacing-vertical: .5rem;
+        font-size: .9rem;
+      }
+      details.yo-select.dropdown:not([role]) > summary {
+        min-height: auto;
+      }
       .gallery-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -39,6 +46,14 @@
         inset: 0;
         background: rgba(0, 0, 0, 0.6);
       }
+      .template-card .overlay {
+        position: absolute;
+        inset: 9em 2em 0;
+        color: black;
+        font-size: .85em;
+        font-weight: bold;
+        text-align: center;
+      }
       .template-card .overlay-hover {
         opacity: 0;
         position: absolute;
@@ -56,11 +71,6 @@
       }
       .template-card:hover .overlay-hover {
         opacity: 1;
-      }
-      #no-results {
-        grid-column: 1 / -1;
-        text-align: center;
-        color: var(--pico-muted-color);
       }
     </style>
   </head>
@@ -101,6 +111,13 @@
         },
       ];
 
+      const makeCountryQuoteTemplate = ({ id, overlay }) => ({
+        id,
+        template: 'concerns',
+        background: './assets/concerns.png',
+        overlay,
+      })
+
       const gallery = document.getElementById('gallery');
       const langSelect = document.getElementById('lang-select');
 
@@ -113,11 +130,6 @@
         }
 
         return cache[locale];
-      }
-
-      function getCurrentLanguage() {
-        return langSelect.querySelector(`[value="${langSelect.value}"]`)
-          ?.innerText;
       }
 
       function buildUrl(template, translation) {
@@ -155,7 +167,8 @@
         a.href = buildUrl(template.template, translation);
         a.innerHTML = `
           <img src="${template.background}" alt="" />
-          <div class="overlay-hover"><span>View and edit<br/>in ${getCurrentLanguage()}</span></div>
+          ${template.overlay ? `<div class="overlay">${template.overlay}</div>` : ''}
+          <div class="overlay-hover"><span>View and edit</span></div>
         `;
         return a;
       }
@@ -165,7 +178,7 @@
 
         const translations = await translationsLoader();
         const resolveTranslation = (t) => {
-          const { $parent, ...rest } = t;
+          const { $parent, ...rest } = t ?? {};
           const parentData = $parent ? resolveTranslation(translations[$parent]) : {}
           return { ...parentData, ...rest }
         }
@@ -175,11 +188,18 @@
           if (!translation) continue;
           gallery.appendChild(makeLink(template, translation));
         }
+
+        for (const [idx, concern] of Object.entries(translations.concerns ?? [])) {
+          const translation = resolveTranslation(concern);
+          let overlay = translation.body.length > 100 ? `${translation.body.slice(0, 97)}&hellip;` : translation.body;
+          const template = makeCountryQuoteTemplate({ id: `concern_${idx}`, overlay });
+          gallery.appendChild(makeLink(template, translation));
+        }
       }
 
       new YoSelect(langSelect, {
         search: true,
-        searchPlaceholder: 'Search language…',
+        searchPlaceholder: 'Search country…',
       });
 
       langSelect.addEventListener('change', async (e) => {
