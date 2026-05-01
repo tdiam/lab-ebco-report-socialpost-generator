@@ -240,16 +240,37 @@
         }
       }
 
+      // Read locale from URL, falling back to en-UK
+      const initialLocale = new URLSearchParams(window.location.search).get('locale') ?? 'en-UK';
+      const matchingOption = langSelect.querySelector(`option[value="${CSS.escape(initialLocale)}"]`);
+      if (matchingOption) {
+        langSelect.querySelectorAll('option[selected]').forEach(o => o.removeAttribute('selected'));
+        matchingOption.setAttribute('selected', '');
+        langSelect.value = initialLocale;
+      }
+
       new YoSelect(langSelect, {
         search: true,
         searchPlaceholder: 'Search country…',
       });
 
       langSelect.addEventListener('change', async (e) => {
-        render(() => loadPack(e.target.value));
+        const locale = e.target.value;
+        const url = new URL(window.location.href);
+        url.searchParams.set('locale', locale);
+        window.history.pushState({ locale }, '', url);
+        render(() => loadPack(locale));
       });
 
-      render(() => loadPack('en-UK'));
+      // Handle browser back/forward navigation
+      window.addEventListener('popstate', (e) => {
+        const locale = e.state?.locale ?? new URLSearchParams(window.location.search).get('locale') ?? 'en-UK';
+        langSelect.value = locale;
+        langSelect.dispatchEvent(new Event('change', { bubbles: true }));
+        render(() => loadPack(locale));
+      });
+
+      render(() => loadPack(initialLocale));
     </script>
   </body>
 </html>
