@@ -677,7 +677,7 @@
 
       document.querySelector('.download-btn').addEventListener('click', () => {
         const link = document.createElement('a');
-        link.download = 'social-image.png';
+        link.download = 'social-image-quote.png';
         canvas.convertToBlob().then((blob) => {
           link.href = URL.createObjectURL(blob);
           link.click();
