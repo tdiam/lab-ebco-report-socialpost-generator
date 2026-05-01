@@ -240,8 +240,8 @@
         }
       }
 
-      // Read locale from URL, falling back to en-UK
-      const initialLocale = new URLSearchParams(window.location.search).get('locale') ?? 'en-UK';
+      // Read locale from URL, falling back to en-GB
+      const initialLocale = new URLSearchParams(window.location.search).get('locale') ?? 'en-GB';
       const matchingOption = langSelect.querySelector(`option[value="${CSS.escape(initialLocale)}"]`);
       if (matchingOption) {
         langSelect.querySelectorAll('option[selected]').forEach(o => o.removeAttribute('selected'));
@@ -264,7 +264,7 @@
 
       // Handle browser back/forward navigation
       window.addEventListener('popstate', (e) => {
-        const locale = e.state?.locale ?? new URLSearchParams(window.location.search).get('locale') ?? 'en-UK';
+        const locale = e.state?.locale ?? new URLSearchParams(window.location.search).get('locale') ?? 'en-GB';
         langSelect.value = locale;
         langSelect.dispatchEvent(new Event('change', { bubbles: true }));
         render(() => loadPack(locale));
