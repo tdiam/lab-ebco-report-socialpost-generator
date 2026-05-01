@@ -1,18 +1,43 @@
 {
-  "quote": {
-    "heading": "El Liderazgo Importa",
-    "creditTitle": "CEO, Ebco"
+  "cover": {
+    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
+    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
+    "outnow": "OUT NOW",
+    "visit": "Visit our website",
+    "covers": "The Annual Report covers developments during 2025",
+    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+  },
+  "_quote": {
+    "heading": "EBCO Annual Report"
+  },
+  "_foreword_quote": {
+    "$parent": "_quote",
+    "creditTitle": "EBCO President"
+  },
+  "_concerns_quote": {
+    "$parent": "_quote",
+    "concerns": "Principal concerns for the United Kingdom:"
   },
   "quote_1": {
-    "$parent": "quote",
-    "body": "Las grandes cosas en los negocios nunca las hace una sola persona."
+    "$parent": "_foreword_quote",
+    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
   },
   "quote_2": {
-    "$parent": "quote",
-    "body": "La única manera de hacer un gran trabajo es amar lo que haces."
+    "$parent": "_foreword_quote",
+    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
   },
   "quote_3": {
-    "$parent": "quote",
-    "body": "Solos podemos hacer tan poco; juntos podemos hacer tanto."
-  }
+    "$parent": "_foreword_quote",
+    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+  },
+  "concerns": [
+    {
+      "$parent": "_concerns_quote",
+      "body": "1. Military-themed programmes form obligatory parts of the education curriculum (Day of Defence and Citizenship)."
+    },
+    {
+      "$parent": "_concerns_quote",
+      "body": "2. Plans for reintroduction of conscription."
+    }
+  ]
 }
