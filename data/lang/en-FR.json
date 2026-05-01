@@ -1,0 +1,39 @@
+{
+  "cover": {
+    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
+    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
+    "outnow": "OUT NOW",
+    "visit": "Visit our website",
+    "covers": "The Annual Report covers developments during 2025",
+    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+  },
+  "_quote": {
+    "heading": "EBCO Annual Report"
+  },
+  "_foreword_quote": {
+    "$parent": "_quote",
+    "creditTitle": "EBCO President"
+  },
+  "_concerns_quote": {
+    "$parent": "_quote",
+    "concerns": "Principal concerns for France:"
+  },
+  "quote_1": {
+    "$parent": "_foreword_quote",
+    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+  },
+  "quote_2": {
+    "$parent": "_foreword_quote",
+    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+  },
+  "quote_3": {
+    "$parent": "_foreword_quote",
+    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+  },
+  "concerns": [
+    {
+      "$parent": "_concerns_quote",
+      "body": "Military-themed programmes form obligatory parts of the education curriculum (Day of Defence and Citizenship)."
+    }
+  ]
+}

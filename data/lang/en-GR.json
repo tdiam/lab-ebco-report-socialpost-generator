@@ -1,0 +1,43 @@
+{
+  "cover": {
+    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
+    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
+    "outnow": "OUT NOW",
+    "visit": "Visit our website",
+    "covers": "The Annual Report covers developments during 2025",
+    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+  },
+  "_quote": {
+    "heading": "EBCO Annual Report"
+  },
+  "_foreword_quote": {
+    "$parent": "_quote",
+    "creditTitle": "EBCO President"
+  },
+  "_concerns_quote": {
+    "$parent": "_quote",
+    "concerns": "Principal concerns for Greece:"
+  },
+  "quote_1": {
+    "$parent": "_foreword_quote",
+    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+  },
+  "quote_2": {
+    "$parent": "_foreword_quote",
+    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+  },
+  "quote_3": {
+    "$parent": "_foreword_quote",
+    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+  },
+  "concerns": [
+    {
+      "$parent": "_concerns_quote",
+      "body": "Alternative service is punitive and discriminatory, inter alia, in terms of longer duration, discriminatory geographical restrictions, compensation being below the poverty threshold, and remains under the supervision of the Ministry of Defence.\n\nConscientious objectors are subjected to inquiry and are discriminated against when applying on ideological grounds. The process has yet to be placed under the full control of civilian authorities."
+    },
+    {
+      "$parent": "_concerns_quote",
+      "body": "Punishment of certain categories of conscientious objectors continues, in violation of international law. Such punishment may also be repeated in violation of ne bis in idem.\n\nNon-compliance to the UN Human Rights Committee decision on Petromelidis v. Greece."
+    }
+  ]
+}

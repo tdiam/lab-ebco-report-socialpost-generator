@@ -1,0 +1,33 @@
+{
+  "cover": {
+    "heading": "JAHRESBERICHT: WEHRDIENSTVERWEIGERUNG AUS GEWISSENSGRÜNDEN IN EUROPA 2025",
+    "ebco": "EUROPÄISCHES BÜRO FÜR WEHRDIENSTVERWEIGERUNG (EBCO)",
+    "outnow": "JETZT ERHÄLTLICH",
+    "visit": "Besuchen Sie unsere Website",
+    "covers": "Der Jahresbericht behandelt die Entwicklungen im Jahr 2025",
+    "moreinfo": "Weitere Informationen finden Sie auf der Website von EBCO: www.ebco-beoc.org"
+  },
+  "_quote": {
+    "heading": "EBCO-Jahresbericht"
+  },
+  "_foreword_quote": {
+    "$parent": "_quote",
+    "creditTitle": "EBCO-Präsident"
+  },
+  "_concerns_quote": {
+    "$parent": "_quote",
+    "concerns": "Wichtigste Anliegen für die Schweiz:"
+  },
+  "quote_1": {
+    "$parent": "_foreword_quote",
+    "body": "Anhaltende bewaffnete Konflikte und geopolitische Spannungen verstärken den Druck auf <strong>Menschen, die sich weigern, zu den Waffen zu greifen</strong>, und setzen sie der Verfolgung, Diskriminierung und Unterdrückung aus."
+  },
+  "quote_2": {
+    "$parent": "_foreword_quote",
+    "body": "Nachhaltige Sicherheit lässt sich nicht <strong>durch Militarisierung</strong> erreichen."
+  },
+  "quote_3": {
+    "$parent": "_foreword_quote",
+    "body": "Die Verweigerung der Kriegsbeteiligung ist nicht nur ein geschütztes Recht, sondern eine notwendige Voraussetzung für den Aufbau\n<strong>eines gerechten und dauerhaften Friedens</strong>."
+  }
+}
