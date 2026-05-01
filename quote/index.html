@@ -229,6 +229,7 @@
           color: '#fcee2d',
           x: canvas.width / 2,
           y: 200,
+          align: 'center',
         },
         headingYear: {
           font: {
@@ -241,6 +242,7 @@
           color: '#ffffff',
           x: canvas.width / 2,
           y: 240,
+          align: 'center',
         },
         body: {
           font: {
@@ -248,11 +250,13 @@
             style: '700',
             family: 'Noto Sans',
           },
+          containerWidth: 920,
           containerHeight: 400,
           lineHeight: 1.5,
           color: '#32517f',
           x: canvas.width / 2,
           y: 500,
+          align: 'center',
         },
         creditName: {
           font: {
@@ -260,23 +264,25 @@
             style: '700',
             family: 'Noto Sans',
           },
+          containerWidth: 250,
           containerHeight: 45,
           lineHeight: 1.5,
           color: '#32517f',
-          x: 980,
+          x: 840,
           y: 940,
         },
         creditTitle: {
           font: {
-            size: [30],
+            size: [30, 26, 22],
             style: '700',
             family: 'Noto Sans',
             highlight: true,
           },
+          containerWidth: 250,
           containerHeight: 45,
           lineHeight: 1.5,
           color: '#32517f',
-          x: 980,
+          x: 840,
           y: 980,
         },
       };
@@ -329,7 +335,7 @@
         const blocks = [];
         let currentBlock = {
           segments: [],
-          align: 'left', // default alignment
+          align: null,
         };
 
         for (const op of ops) {
@@ -351,7 +357,7 @@
               // If this is not the last part, we have a newline
               if (i < parts.length - 1) {
                 // The alignment comes from the newline's attributes
-                currentBlock.align = op.attributes?.align || 'left';
+                currentBlock.align = op.attributes?.align || null;
                 blocks.push(currentBlock);
                 currentBlock = {
                   segments: [],
@@ -363,7 +369,7 @@
             // If text ends with newline, the last part is empty and we already pushed
             // The alignment for ending newline is preserved in op.attributes
             if (text.endsWith('\n')) {
-              currentBlock.align = op.attributes?.align || 'left';
+              currentBlock.align = op.attributes?.align || null;
             }
           } else {
             // No newline, just add text to current block
@@ -392,10 +398,12 @@
         fontConfig,
         baseColor,
         containerHeight,
+        align,
       }) {
         if (DEBUG) {
           ctx.strokeStyle = '#ff0000';
-          ctx.strokeRect(x - maxWidth / 2, y, maxWidth, containerHeight);
+          const leftX = align === 'center' ? (x - maxWidth / 2) : x;
+          ctx.strokeRect(leftX, y, maxWidth, containerHeight);
         }
 
         function calculateHeight(font) {
@@ -454,7 +462,7 @@
 
           // Render each wrapped line with the block's alignment
           wrappedLines.forEach((wrappedLine, i) => {
-            let resolvedAlign = block.align;
+            let resolvedAlign = block.align ?? align ?? 'left';
             if (resolvedAlign === 'justify' && i === wrappedLines.length - 1) {
               resolvedAlign = 'left';
             }
@@ -535,7 +543,10 @@
         }
 
         const totalWidth = segments.reduce((sum, seg) => sum + seg.width, 0);
-        let currentX = x - totalWidth / 2;
+        let currentX = x;
+        if (align === 'center') {
+          currentX -= totalWidth / 2;
+        }
 
         ctx.textAlign = 'left';
         ctx.textBaseline = 'middle';
@@ -570,14 +581,15 @@
         for (const [name, txt] of Object.entries(statics)) {
           wrapAndRenderBlocks({
             ctx,
-            blocks: [{ align: 'left', ...txt.block }],
+            blocks: [txt.block],
             x: template[name].x,
             y: template[name].y,
-            maxWidth: canvas.width - 240,
+            maxWidth: template[name].containerWidth ?? canvas.width,
             fontConfig: template[name].font,
             lineHeight: template[name].lineHeight,
             baseColor: template[name].color,
             containerHeight: template[name].containerHeight,
+            align: template[name].align,
           });
         }
 
@@ -590,11 +602,12 @@
             blocks,
             x: template[name].x,
             y: template[name].y,
-            maxWidth: canvas.width - 200,
+            maxWidth: template[name].containerWidth ?? canvas.width,
             fontConfig: template[name].font,
             lineHeight: template[name].lineHeight,
             baseColor: template[name].color,
             containerHeight: template[name].containerHeight,
+            align: template[name].align,
           });
         }
 
