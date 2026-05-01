@@ -1,39 +1,39 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "ÅRSRAPPORT: MILITÆRVÆRNSPLIGTSNÆGTELSE I EUROPA 2025",
+    "ebco": "Det Europæiske Kontor for Militærnægtere (EBCO)",
+    "outnow": "NU I HANDELEN",
+    "visit": "Besøg vores hjemmeside",
+    "covers": "Årsrapporten omhandler udviklingen i 2025",
+    "moreinfo": "Du kan finde mere information på EBCO’s hjemmeside: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "EBCO&#x27;s årsrapport"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "EBCO&#x27;s formand"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Denmark:"
+    "concerns": "De vigtigste bekymringer for Danmark:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "De igangværende væbnede konflikter og geopolitiske spændinger øger presset på <strong>de mennesker, der nægter at bære våben</strong>, og udsætter dem for retsforfølgelse, diskrimination og undertrykkelse."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Bæredygtig sikkerhed kan ikke opnås <strong>gennem militarisering</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Nægtelsen af at deltage i krig er ikke blot en beskyttet rettighed, men en forudsætning for at skabe\n<strong>en retfærdig og varig fred</strong>."
   },
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "No recognition of the right to conscientious objection for professional soldiers."
+      "body": "Der anerkendes ikke nogen ret til militærnægter for erhvervssoldater."
     }
   ]
 }

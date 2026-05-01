@@ -1,33 +1,33 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "ÅRSRAPPORT: SAMVITTIGHETSMOTSTAND MOT MILITÆRTJENESTE I EUROPA 2025",
+    "ebco": "Det europeiske kontoret for militærnektere (EBCO)",
+    "outnow": "TILGJENGELIG NÅ",
+    "visit": "Besøk nettstedet vårt",
+    "covers": "Årsrapporten omhandler utviklingen i løpet av 2025",
+    "moreinfo": "For mer informasjon, besøk EBCOs nettside: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "EBCOs årsrapport"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "EBCO-president"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Norway:"
+    "concerns": "De viktigste bekymringene for Norge:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Pågående væpnede konflikter og geopolitiske spenninger øker presset på <strong>personer som nekter å bære våpen</strong>, og utsettes dem for straffeforfølgelse, diskriminering og undertrykkelse."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Bærekraftig sikkerhet kan ikke oppnås <strong>gjennom militarisering</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Nektelsen av å delta i krig er ikke bare en beskyttet rettighet, men også en nødvendig forutsetning for å skape\n<strong>en rettferdig og varig fred</strong>."
   }
 }

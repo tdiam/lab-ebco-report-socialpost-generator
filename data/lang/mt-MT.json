@@ -1,39 +1,39 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "Rapport Annwali: Oġġezzjoni ta&#x27; Kuxjenza għas-Servizz Militari fl-Ewropa 2025",
+    "ebco": "Uffiċċju Ewropew għall-Oġġezzjoni ta&#x27; Kuxjenza (EBCO)",
+    "outnow": "Diġà disponibbli",
+    "visit": "Żur il-websajt tagħna",
+    "covers": "Ir-Rapport Annwali jkopri l-iżviluppi matul is-sena 2025.",
+    "moreinfo": "Biex issib aktar informazzjoni, żur is-sit web ta&#x27; EBCO: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "Rapport Annwali tal-EBCO"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "President tal-EBCO"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Malta:"
+    "concerns": "Inkwiet ewlieni għal Malta:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Kunflitti armati kontinwi u tensjonijiet ġeopolitiċi qed iżidu l-pressjonijiet fuq <strong>individwi li jirrifjutaw li jieħdu sehem fil-ġlied</strong>, u qed jeżponuhom għal prosekuzzjoni, diskriminazzjoni u reppressjoni."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Sigurtà sostenibbli ma tistax tinkiseb <strong>permezz tal-militarizzazzjoni</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Ir-rifjut li wieħed jipparteċipa fil-gwerra mhux biss huwa dritt protett, iżda wkoll kundizzjoni meħtieġa biex tinbena\n<strong>paċi ġusta u durabbli</strong>."
   },
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "No recognition of the right to conscientious objection exists for those enlisted in voluntary service, reserve service, or the military personnel."
+      "body": "M&#x27;hemm l-ebda rikonoxximent tad-dritt għall-objizzjoni ta&#x27; kuxjenza għal dawk li jkunu arruolati fis-servizz volontarju, fis-servizz ta&#x27; riserva, jew fil-persunal militari."
     }
   ]
 }

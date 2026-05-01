@@ -1,39 +1,39 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "RAPORT ANUAL: OBJECȚIA DE CONȘTIINȚĂ FAȚĂ DE SERVICIUL MILITAR ÎN EUROPA 2025",
+    "ebco": "BIROUL EUROPEAN PENTRU OBJECȚIA DE CONȘTIINȚĂ (EBCO)",
+    "outnow": "DISPONIBIL ACUM",
+    "visit": "Vizitați site-ul nostru web",
+    "covers": "Raportul anual prezintă evoluțiile înregistrate în cursul anului 2025",
+    "moreinfo": "Pentru mai multe informații, vizitați site-ul web al EBCO: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "Raportul anual al EBCO"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "Președintele EBCO"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Moldova:"
+    "concerns": "Principalele preocupări ale Moldovei:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Conflictele armate în curs și tensiunile geopolitice intensifică presiunile asupra <strong>persoanelor care refuză să poarte arme</strong>, expunându-le la urmărirea penală, discriminare și represiune."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Securitatea durabilă nu poate fi asigurată <strong>prin militarizare</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Refuzul de a participa la război nu este doar un drept protejat, ci și o condiție necesară pentru construirea\n<strong>unei păci juste și durabile</strong>."
   },
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "Conscientious objectors are subjected to enquiry and are discriminated against when applying on grounds other than membership to specific religious denominations.\n\nNo recognition of right to conscientious objection during or after military service or for serving personnel."
+      "body": "Obiectorii de conștiință sunt supuși unor anchete și sunt discriminați atunci când își prezintă cererea pe alte motive decât apartenența la anumite confesiuni religioase.\n\nNu se recunoaște dreptul la obiecție de conștiință în timpul sau după serviciul militar, nici în cazul personalului militar în activitate."
     }
   ]
 }

@@ -1,33 +1,33 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "ÅRSRAPPORT: VÄSENDESVÄGRING I EUROPA 2025",
+    "ebco": "EUROPEISKA BYRÅN FÖR VÄSNINGSVÄGRARE (EBCO)",
+    "outnow": "UTGIVET",
+    "visit": "Besök vår webbplats",
+    "covers": "Årsredovisningen behandlar utvecklingen under 2025",
+    "moreinfo": "För mer information, besök EBCO:s webbplats: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "EBCO:s årsredovisning"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "EBCO:s ordförande"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Sweden:"
+    "concerns": "De viktigaste frågorna för Sverige:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Pågående väpnade konflikter och geopolitiska spänningar ökar trycket på <strong>personer som vägrar att bära vapen</strong>, vilket utsätter dem för rättsliga åtgärder, diskriminering och förtryck."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Hållbar säkerhet kan inte uppnås <strong>genom militarisering</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Vägran att delta i krig är inte bara en skyddad rättighet, utan också en nödvändig förutsättning för att skapa\n<strong>en rättvis och varaktig fred</strong>."
   }
 }

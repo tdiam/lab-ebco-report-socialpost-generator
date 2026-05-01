@@ -1,33 +1,33 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "VÝROČNÍ ZPRÁVA: VÝHRADA SVĚDOMÍ PROTI VOJENSKÉ SLUŽBĚ V EVROPĚ 2025",
+    "ebco": "Evropská kancelář pro odmítnutí vojenské služby z důvodu svědomí (EBCO)",
+    "outnow": "JIŽ V PRODEJI",
+    "visit": "Navštivte naše webové stránky",
+    "covers": "Výroční zpráva zachycuje vývoj v průběhu roku 2025",
+    "moreinfo": "Další informace najdete na webových stránkách společnosti EBCO: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "Výroční zpráva společnosti EBCO"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "Prezident EBCO"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Czechia:"
+    "concerns": "Hlavní oblasti zájmu pro Česko:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Probíhající ozbrojené konflikty a geopolitické napětí zvyšují tlak na <strong>osoby, které odmítají nosit zbraně</strong>, a vystavují je pronásledování, diskriminaci a represím."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Udržitelnou bezpečnost nelze dosáhnout <strong>militarizací</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Odmítnutí účasti ve válce není jen chráněným právem, ale také nezbytnou podmínkou pro vybudování\n<strong>spravedlivého a trvalého míru</strong>."
   }
 }

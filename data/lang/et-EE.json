@@ -1,33 +1,33 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "AASTAARUANNE: SÕJATEENISTUSEST KOHUSTUSLIKU TEENISTUSE VASTUOLU EUROOPAS 2025",
+    "ebco": "Euroopa Sõjaväeteenistusest keeldumise büroo (EBCO)",
+    "outnow": "NÜÜD SAADAVAL",
+    "visit": "Külasta meie veebilehte",
+    "covers": "Aastaaruanne käsitleb 2025. aasta sündmusi",
+    "moreinfo": "Lisateabe saamiseks külastage EBCO veebisaiti: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "EBCO aastaaruanne"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "EBCO president"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Estonia:"
+    "concerns": "Eesti peamised mureküsimused:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Jätkuvad relvastatud konfliktid ja geopoliitilised pinged suurendavad survet inimestele, <strong>kes keelduvad relva kandmast</strong>, seades nad ohtu kohtuliku jälitamise, diskrimineerimise ja repressioonide ees."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Jätkusuutlikku julgeolekut ei ole võimalik saavutada <strong>militariseerimise abil</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Sõjas osalemise keeldumine ei ole mitte ainult kaitstud õigus, vaid ka\n<strong>õiglase ja püsiva rahu</strong> saavutamise eeltingimus."
   }
 }

@@ -1,33 +1,33 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "Ársskýrsla: Samviskubundin andstaða við herþjónustu í Evrópu 2025",
+    "ebco": "Evrópska stofnunin fyrir samviskubundna andspyrnu (EBCO)",
+    "outnow": "Út núna",
+    "visit": "Heimsækið vefsíðu okkar",
+    "covers": "Ársskýrslan fjallar um þróun árið 2025.",
+    "moreinfo": "Til að fá nánari upplýsingar, heimsækið vefsíðu EBCO: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "Ársskýrsla EBCO"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "Forseti EBCO"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Iceland:"
+    "concerns": "Helstu áhyggjur Íslands:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Viðvarandi vopnuð átök og landfræðileg spennan auka þrýsting á <strong>þá sem neita að bera vopn</strong>, sem setur þá í hættu á ákæru, mismunun og kúgun."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Hagkvæm öryggi er ekki hægt að ná fram <strong>með hernaðarstefnu</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Neitun til þátttöku í stríði er ekki aðeins vernduð réttur, heldur nauðsynleg forsenda fyrir að byggja upp\n<strong>réttlátan og varanlegan frið</strong>."
   }
 }

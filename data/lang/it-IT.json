@@ -1,33 +1,33 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "RELAZIONE ANNUALE: OBIEZIONE DI COSCIENZA AL SERVIZIO MILITARE IN EUROPA 2025",
+    "ebco": "UFFICIO EUROPEO PER L&#x27;OBIEZIONE DI COSCIENZA (EBCO)",
+    "outnow": "DISPONIBILE ORA",
+    "visit": "Visita il nostro sito web",
+    "covers": "La relazione annuale illustra gli sviluppi avvenuti nel corso del 2025",
+    "moreinfo": "Per ulteriori informazioni, visita il sito web di EBCO: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "Relazione annuale EBCO"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "Presidente dell&#x27;EBCO"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Italy:"
+    "concerns": "Principali preoccupazioni per l&#x27;Italia:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "I conflitti armati in corso e le tensioni geopolitiche stanno intensificando le pressioni su <strong>coloro che rifiutano di imbracciare le armi</strong>, esponendoli a procedimenti giudiziari, discriminazioni e repressioni."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "La sicurezza sostenibile non può essere raggiunta <strong>attraverso la militarizzazione</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Il rifiuto di partecipare alla guerra non è solo un diritto tutelato, ma una condizione necessaria per costruire\n<strong>una pace giusta e duratura</strong>."
   }
 }

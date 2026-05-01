@@ -1,47 +1,47 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "Штогадовая справаздача: Прынцыповая адмова ад ваеннай службы ў Еўропе, 2025 г.",
+    "ebco": "Еўрапейскае бюро па сумленчым непадданні (EBCO)",
+    "outnow": "УЖА Ў ПРОДАЖЫ",
+    "visit": "Наведайце наш вэб-сайт",
+    "covers": "Гадавая справаздача ахоплівае падзеі за 2025 год.",
+    "moreinfo": "Каб атрымаць больш інфармацыі, наведайце вэб-сайт EBCO: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "Гадавая справаздача EBCO"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "Прэзідэнт EBCO"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Belarus:"
+    "concerns": "Асноўныя праблемы для Беларусі:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Бесперапынныя ўзброеныя канфлікты і геапалітычныя напружанасці ўзмацняюць ціск на <strong>асоб, якія адмаўляюцца насіць зброю</strong>, падвяргаючы іх пераследу, дыскрымінацыі і рэпрэсіям."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Устойлівая бяспека не можа быць дасягнута <strong>праз мілітарызацыю</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Адмова ад удзелу ў вайне — гэта не толькі абароненае права, але і неабходная ўмова для пабудовы\n<strong>справядлівага і трывалага міру</strong>."
   },
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "Alternative service is punitive and discriminatory in terms of duration (twice that of military service) and recognition is restricted to religious grounds only.\n\nThe process for recognition of conscientious objectors is not under civilian control and lacks independence and impartiality from military bodies."
+      "body": "Альтэрнатыўная служба з&#x27;яўляецца пакаральнай і дыскрымінацыйнай з пункту гледжання тэрміну (удвая даўжэйшая за ваенную службу), а прызнанне абмежавана выключна рэлігійнымі падставамі.\n\nПрацэс прызнання сумленных аб&#x27;екцыянераў не знаходзіцца пад грамадзянскім кантролем і не мае незалежнасці і бесстароннасці з боку ваенных органаў."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "Stricter criminalisation of draft evasion.\n\nNo recognition of conscientious objection during or after military service or for military personnel.\n\nNon-compliance to international recommendations."
+      "body": "Больш жорсткая крыміналізацыя ўхілення ад прызыву.\n\nНепрызнанне пярэчання па сумленні падчас або пасля ваеннай службы, а таксама для ваеннаслужачых.\n\nНеадпаведнасць міжнародным рэкамендацыям."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "Persecution of human rights defenders who protect the rights of conscientious objectors.\n\nExposure of minors to military programs and trainings."
+      "body": "Праследаванне абаронцаў правоў чалавека, якія абараняюць правы сумленных аб&#x27;ектараў.\n\nПрыцягненне непаўналетніх да ваенных праграм і трэніровак."
     }
   ]
 }

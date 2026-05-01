@@ -1,43 +1,43 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "ΕΤΗΣΙΑ ΕΚΘΕΣΗ: ΑΝΤΙΡΡΗΣΗ ΣΥΝΕΙΔΗΣΗΣ ΣΤΗ ΣΤΡΑΤΕΥΣΗ ΣΤΗΝ ΕΥΡΩΠΗ 2025",
+    "ebco": "ΕΥΡΩΠΑΪΚΟ ΓΡΑΦΕΙΟ ΓΙΑ ΤΗΝ ΑΝΤΙΡΡΗΣΗ ΣΥΝΕΙΔΗΣΗΣ (EBCO)",
+    "outnow": "ΔΗΜΟΣΙΕΥΤΗΚΕ",
+    "visit": "Στη σελίδα μας",
+    "covers": "Η Ετήσια Έκθεση καλύπτει εξελίξεις εντός του 2025",
+    "moreinfo": "Για περισσότερες πληροφορίες, μπείτε στο site του EBCO: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "Ετήσια Έκθεση EBCO"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "Πρόεδρος EBCO"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Greece:"
+    "concerns": "Κύρια θέματα που απασχολούν την Ελλάδα:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Οι συνεχιζόμενες ένοπλες συγκρούσεις και οι γεωπολιτικές εντάσεις εντείνουν τις πιέσεις που ασκούνται σε <strong>άτομα που αρνούνται να στρατευθούν</strong>, εκθέτοντάς τα σε διώξεις, διακρίσεις και καταστολή."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Η βιώσιμη ασφάλεια δεν μπορεί να επιτευχθεί <strong>μέσω της στρατιωτικοποίησης</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Η άρνηση συμμετοχής στον πόλεμο δεν είναι μόνο ένα δικαίωμα που χρήζει προστασίας, αλλά και απαραίτητη προϋπόθεση για την οικοδόμηση\n<strong>μιας δίκαιης και διαρκούς ειρήνης</strong>."
   },
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "Alternative service is punitive and discriminatory, inter alia, in terms of longer duration, discriminatory geographical restrictions, compensation being below the poverty threshold, and remains under the supervision of the Ministry of Defence.\n\nConscientious objectors are subjected to inquiry and are discriminated against when applying on ideological grounds. The process has yet to be placed under the full control of civilian authorities."
+      "body": "Η εναλλακτική υπηρεσία είναι τιμωρητική και δυσμενής, μεταξύ άλλων λόγω της μεγαλύτερης διάρκειας, των δυσμενών γεωγραφικών περιορισμών και της αμοιβής που βρίσκεται κάτω από το όριο της φτώχειας, ενώ εξακολουθεί να τελεί υπό την εποπτεία του Υπουργείου Άμυνας.\n\nΟι αντιρρησίες συνείδησης υποβάλλονται σε έρευνα και υφίστανται διακρίσεις όταν υποβάλλουν αίτηση για ιδεολογικούς λόγους. Η διαδικασία δεν έχει ακόμη τεθεί υπό τον πλήρη έλεγχο των πολιτικών αρχών."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "Punishment of certain categories of conscientious objectors continues, in violation of international law. Such punishment may also be repeated in violation of ne bis in idem.\n\nNon-compliance to the UN Human Rights Committee decision on Petromelidis v. Greece."
+      "body": "Η ποινικοποίηση ορισμένων κατηγοριών αντιρρησιών συνείδησης συνεχίζεται, κατά παράβαση του διεθνούς δικαίου. Οι ποινές αυτές ενδέχεται επίσης να επιβάλλονται επανειλημμένα, κατά παράβαση της αρχής του «ne bis in idem».\n\nΜη συμμόρφωση με την απόφαση της Επιτροπής Ανθρωπίνων Δικαιωμάτων του ΟΗΕ στην υπόθεση Πετρομελίδη κατά Ελλάδας."
     }
   ]
 }

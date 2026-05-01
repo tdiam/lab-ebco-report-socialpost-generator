@@ -1,43 +1,43 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "ყოველწლიური ანგარიში: ევროპაში სამხედრო სამსახურის მიმართ სინდისის მიზეზით უარის თქმის შესახებ 2025",
+    "ebco": "ევროპის ბიურო სინდისის ნებადართული წინააღმდეგობისთვის (EBCO)",
+    "outnow": "უკვე ხელმისაწვდომია",
+    "visit": "ეწვიეთ ჩვენს ვებსაიტს",
+    "covers": "წლიური ანგარიში მოიცავს 2025 წლის განმავლობაში განვითარებულ მოვლენებს.",
+    "moreinfo": "დამატებითი ინფორმაციისთვის ეწვიეთ EBCO-ს ვებსაიტს: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "EBCO-ს წლიური ანგარიში"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "EBCO-ს პრეზიდენტი"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Georgia:"
+    "concerns": "საქართველოსთვის მთავარი საზრუნავი:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "მუდმივი შეიარაღებული კონფლიქტები და გეოპოლიტიკური დაძაბულობა აძლიერებს ზეწოლას იმათზე, <strong>ვინც უარს ამბობს იარაღის ტარებაზე</strong>, რაც მათ სისხლისსამართლებრივი დევნის, დისკრიმინაციისა და რეპრესიების საფრთხის წინაშე აყენებს."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "მდგრადი უსაფრთხოება <strong>მილიტარიზაციის გზით</strong> ვერ მიიღწევა."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "ომში მონაწილეობის უარის თქმა არა მხოლოდ დაცული უფლება, არამედ\n<strong>სამართლიანი და მტკიცე მშვიდობის</strong> დამყარების აუცილებელი პირობაა."
   },
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "Strict time limitations for raising conscientious objection claims, first-stage consideration by military conscription commissions and lack of clear safeguards against arbitrary denials.\n\nPunitive and discriminatory length of the alternative civilian service.\n\nNo specific provisions for professional members of the armed forces."
+      "body": "სინდისის ნიადაგზე უარის თქმის შესახებ განცხადების წარდგენის მკაცრი დროითი შეზღუდვები, პირველადი განხილვა სამხედრო გაწვევის კომისიების მიერ და თვითნებური უარყოფის წინააღმდეგ მკაფიო დაცვის მექანიზმების არარსებობა.\n\nალტერნატიული სამოქალაქო სამსახურის სასჯელისმაგვარი და დისკრიმინაციული ხანგრძლივობა.\n\nიარაღოსანი ძალების პროფესიონალი წევრებისთვის სპეციალური დებულებების არარსებობა."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "Juvenile military training involving the handling of firearms.\n\nDeportation of Russian antiwar activist Nikolai Belikov."
+      "body": "ახალგაზრდული სამხედრო მომზადება ცეცხლსასროლი იარაღის მოპყრობის ჩათვლით.\n\nრუსი ანტიომის აქტივისტის, ნიკოლაი ბელიკოვის, დეპორტაცია."
     }
   ]
 }

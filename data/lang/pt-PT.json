@@ -1,33 +1,33 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "RELATÓRIO ANUAL: OBJEÇÃO DE CONSCIÊNCIA AO SERVIÇO MILITAR NA EUROPA 2025",
+    "ebco": "GABINETE EUROPEU PARA A OBJEÇÃO DE CONSCIÊNCIA (EBCO)",
+    "outnow": "Já disponível",
+    "visit": "Visite o nosso site",
+    "covers": "O Relatório Anual abrange os desenvolvimentos ocorridos durante o ano de 2025",
+    "moreinfo": "Para obter mais informações, visite o site da EBCO: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "Relatório Anual da EBCO"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "Presidente da EBCO"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Portugal:"
+    "concerns": "Principais preocupações para Portugal:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Os conflitos armados em curso e as tensões geopolíticas estão a intensificar as pressões sobre <strong>as pessoas que se recusam a pegar em armas</strong>, expondo-as a perseguições, discriminação e repressão."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "A segurança sustentável não pode ser alcançada <strong>através da militarização</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "A recusa em participar na guerra não é apenas um direito protegido, mas uma condição necessária para a construção\n<strong>de uma paz justa e duradoura</strong>."
   }
 }

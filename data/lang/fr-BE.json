@@ -1,43 +1,43 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "RAPPORT ANNUEL : L&#x27;OBJECTION DE CONSCIENCE EN EUROPE 2025",
+    "ebco": "BUREAU EUROPÉEN POUR L&#x27;OBJECTION DE CONSCIENCE (EBCO)",
+    "outnow": "DISPONIBLE DÈS MAINTENANT",
+    "visit": "Visitez notre site web",
+    "covers": "Le rapport annuel rend compte des développements intervenus au cours de l&#x27;année 2025",
+    "moreinfo": "Pour plus d&#x27;informations, rendez-vous sur le site web d&#x27;EBCO : www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "Rapport annuel de l&#x27;EBCO"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "Président de l&#x27;EBCO"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Belgium:"
+    "concerns": "Principales préoccupations pour la Belgique :"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Les conflits armés en cours et les tensions géopolitiques accentuent les pressions exercées sur <strong>les personnes qui refusent de prendre les armes</strong>, les exposant ainsi à des poursuites, à la discrimination et à la répression."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "<strong>La militarisation</strong> ne permet pas d&#x27;assurer une sécurité durable."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Le refus de participer à la guerre n&#x27;est pas seulement un droit protégé, mais aussi une condition indispensable à l&#x27;instauration\n<strong>d&#x27;une paix juste et durable</strong>."
   },
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "No recognition of the right to conscientious objection for professional soldiers or reservists.\n\nExposure of minors to military programs and training."
+      "body": "Absence de reconnaissance du droit à l&#x27;objection de conscience pour les militaires de carrière ou les réservistes.\n\nExposition des mineurs à des programmes et à des formations militaires."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "No full guarantee of international protection for conscientious objectors to military service who are at risk of persecution in their country of origin."
+      "body": "Il n&#x27;existe pas de garantie totale de protection internationale pour les objecteurs de conscience au service militaire qui risquent d&#x27;être persécutés dans leur pays d&#x27;origine."
     }
   ]
 }

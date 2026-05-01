@@ -1,43 +1,43 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "ГОДОВОЙ ОТЧЕТ: ОТКАЗ ОТ ВОЕННОЙ СЛУЖБЫ ПО СОВЕСТИ В ЕВРОПЕ, 2025 ГОД",
+    "ebco": "Европейское бюро по вопросам отказа от военной службы по соображениям совести (EBCO)",
+    "outnow": "УЖЕ В ПРОДАЖЕ",
+    "visit": "Посетите наш сайт",
+    "covers": "В годовом отчете освещаются события 2025 года",
+    "moreinfo": "Для получения дополнительной информации посетите веб-сайт EBCO: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "Годовой отчет EBCO"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "Президент EBCO"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Russia:"
+    "concerns": "Основные проблемы для России:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Продолжающиеся вооруженные конфликты и геополитическая напряженность усиливают давление на <strong>людей, отказывающихся брать в руки оружие</strong>, подвергая их преследованиям, дискриминации и репрессиям."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Устойчивую безопасность невозможно обеспечить <strong>с помощью милитаризации</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Отказ от участия в войне — это не только право, защищаемое законом, но и необходимое условие для построения\n<strong>справедливого и прочного мира</strong>."
   },
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "Alternative civilian service is punitive and discriminatory, inter alia, in terms of duration.\n\nNo right to conscientious objection exists for serving military personnel, mobilised persons, or reservists.\n\nForced recruitment of vulnerable groups and foreign nationals into military service. Systematic coercion of conscripts to sign military contracts through deception, threats, and violence."
+      "body": "Альтернативная гражданская служба носит карательный и дискриминационный характер, в частности, в отношении срока её прохождения.\n\nПраво на отказ от военной службы по соображениям совести отсутствует у действующих военнослужащих, мобилизованных лиц и резервистов.\n\nПринудительный призыв представителей уязвимых групп населения и иностранных граждан на военную службу. Систематическое принуждение призывников к подписанию военных контрактов с помощью обмана, угроз и насилия."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "Repression against human rights defenders assisting conscientious objectors, Elena Popova, Maria Bontsler, Artem Klyga."
+      "body": "Репрессии в отношении правозащитников, оказывающих помощь отказникам по соображениям совести: Елена Попова, Мария Бонцлер, Артем Клыга."
     }
   ]
 }

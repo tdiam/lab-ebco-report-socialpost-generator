@@ -1,47 +1,47 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "VUOSIKERTOMUS: SOTILASPALVELUKSEN VASTUSTAMINEN OMATUNNON PERUSTEELLA EUROOPASSA 2025",
+    "ebco": "EUROOPAN ASIASTON ASIASTON (EBCO)",
+    "outnow": "NYT SAATAVILLA",
+    "visit": "Käy verkkosivuillamme",
+    "covers": "Vuosikertomus käsittelee vuoden 2025 tapahtumia",
+    "moreinfo": "Lisätietoja saat EBCO:n verkkosivuilta: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "EBCO:n vuosikertomus"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "EBCO:n puheenjohtaja"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Finland:"
+    "concerns": "Suomen tärkeimmät huolenaiheet:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Käynnissä olevat aseelliset konfliktit ja geopoliittiset jännitteet lisäävät painetta niihin <strong>ihmisiin, jotka kieltäytyvät ottamasta aseita käsiinsä</strong>, ja altistavat heidät syytteille, syrjinnälle ja sortolle."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Kestävää turvallisuutta ei voida saavuttaa <strong>militarisoinnin avulla</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Sodan kieltäytyminen ei ole pelkästään suojattu oikeus, vaan myös välttämätön edellytys\n<strong>oikeudenmukaisen ja kestävän rauhan</strong> rakentamiselle."
   },
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "Alternative service is punitive and discriminatory in terms of longer duration (more than 2x that of military service).\n\nPoor availability of information about the right to conscientious objection.\n\nReports that conscripts are deterred by military officers from applying to be transferred to alternative service."
+      "body": "Vaihtoehtoinen palvelus on rangaistuksellinen ja syrjivä, sillä sen kesto on pidempi (yli kaksinkertainen sotilaspalvelukseen verrattuna).\n\nTietoa oikeudesta aseistakieltäytyjyyteen on saatavilla vain vähän.\n\nOn raportoitu, että upseerit estävät varusmiehiä hakemaan siirtoa vaihtoehtoiseen palvelukseen."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "Plans to reform non-military service and steer towards “comprehensive security” and “preparedness”. Plans to introduce an obligatory national defence day for 17 year-olds. Military courses already offered to 16-17 year-olds."
+      "body": "Suunnitelmat siviilipalveluksen uudistamiseksi ja siirtymiseksi kohti ”kokonaisvaltaista turvallisuutta” ja ”valmiutta”. Suunnitelmat ottaa käyttöön pakollinen kansallispuolustuspäivä 17-vuotiaille. Sotilaskursseja tarjotaan jo 16–17-vuotiaille."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "No full guarantee of international protection for conscientious objectors to military service who are at risk of persecution in their country of origin."
+      "body": "Ei täyttä takuuta kansainvälisestä suojelusta niille asevelvollisuuden kieltäytyjille, jotka ovat vaarassa joutua vainon kohteeksi kotimaassaan."
     }
   ]
 }

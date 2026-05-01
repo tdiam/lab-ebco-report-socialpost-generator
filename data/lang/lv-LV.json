@@ -1,39 +1,39 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "GADA PĀRSKATS: SADZĪVES PĀRSTĀVJU IEBILDUMI PRET MILITĀRO DIENESTU EIROPĀ 2025. GADĀ",
+    "ebco": "Eiropas Birojs par apziņas dēļ veikto atteikšanos no militārā dienesta (EBCO)",
+    "outnow": "Jau pieejams",
+    "visit": "Apmeklējiet mūsu tīmekļa vietni",
+    "covers": "Gada pārskats aptver notikumus 2025. gadā",
+    "moreinfo": "Lai iegūtu vairāk informācijas, apmeklējiet EBCO tīmekļa vietni: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "EBCO gada pārskats"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "EBCO prezidents"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Latvia:"
+    "concerns": "Galvenās problēmas Latvijā:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Pašreizējie bruņotie konflikti un ģeopolitiskā spriedze pastiprina spiedienu uz <strong>cilvēkiem, kuri atsakās ņemt rokās ieročus</strong>, pakļaujot viņus vajāšanai, diskriminācijai un represijām."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Ilgtspējīgu drošību nevar panākt, <strong>izmantojot militarizāciju</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Atsacīšanās piedalīties karā ir ne tikai tiesības, kas tiek aizsargātas, bet arī nepieciešams priekšnoteikums\n<strong>taisnīga un ilgstoša miera</strong> veidošanai."
   },
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "No recognition of the right to conscientious objection during military service or for military personnel."
+      "body": "Nav atzītas tiesības uz atteikšanos no militārā dienesta sirdsapziņas dēļ, ne militārā dienesta laikā, ne militārpersonām."
     }
   ]
 }

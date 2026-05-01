@@ -1,33 +1,33 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "JAARVERSLAG: MILITAIRE DIENSTWEIGERING IN EUROPA 2025",
+    "ebco": "EUROPEES BUREAU VOOR GEWETENSBEZWAAR (EBCO)",
+    "outnow": "NU VERKRIJGBAAR",
+    "visit": "Bezoek onze website",
+    "covers": "Het jaarverslag behandelt de ontwikkelingen in 2025",
+    "moreinfo": "Ga voor meer informatie naar de website van EBCO: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "EBCO-jaarverslag"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "Voorzitter van EBCO"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Netherlands:"
+    "concerns": "Belangrijkste aandachtspunten voor Nederland:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "De aanhoudende gewapende conflicten en geopolitieke spanningen vergroten de druk op <strong>mensen die weigeren de wapens op te nemen</strong>, waardoor zij worden blootgesteld aan vervolging, discriminatie en onderdrukking."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Duurzame veiligheid kan niet worden bereikt <strong>door middel van militarisering</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "De weigering om aan een oorlog deel te nemen is niet alleen een beschermd recht, maar ook een noodzakelijke voorwaarde voor het tot stand brengen van\n<strong>een rechtvaardige en duurzame vrede</strong>."
   }
 }

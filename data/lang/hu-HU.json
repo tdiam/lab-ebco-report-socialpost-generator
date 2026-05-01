@@ -1,43 +1,43 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "ÉVES JELENTÉS: A KATONAI SZOLGÁLAT MELLETT TÁMOGATOTT LELKIISMERETI OKOKBÓL TÖRTÉNŐ TILTAKOZÁS EURÓPÁBAN 2025",
+    "ebco": "EURÓPAI IRODA A LELKIISMERETI OKOKBÓL TÖRTÉNŐ SZOLGÁLATMEGTAGADÁS ÜGYÉBEN (EBCO)",
+    "outnow": "MÁR KAPHATÓ",
+    "visit": "Látogasson el honlapunkra",
+    "covers": "Az éves jelentés a 2025-ös év eseményeit tárgyalja",
+    "moreinfo": "További információkért látogasson el az EBCO weboldalára: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "Az EBCO éves jelentése"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "az EBCO elnöke"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Hungary:"
+    "concerns": "Magyarország legfontosabb kihívásai:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "A jelenleg is dúló fegyveres konfliktusok és a geopolitikai feszültségek egyre nagyobb nyomást gyakorolnak azokra <strong>az emberekre, akik nem hajlandók fegyvert ragadni</strong>, és ezáltal büntetőeljárásnak, megkülönböztetésnek és elnyomásnak teszik ki őket."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "A fenntartható biztonság nem érhető el <strong>militarizációval</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "A háborúban való részvétel megtagadása nem csupán védett jog, hanem\n<strong>az igazságos és tartós béke</strong> megteremtésének elengedhetetlen feltétele is."
   },
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "No release of professional soldiers, on grounds of conscience, including during a state of emergency.\n\nMilitarisation of education and no updated information on the implementation of the recommendation of the Committee on the Rights of the Child to “ensure that children are not subjected to military training that involves the use of firearms."
+      "body": "A hivatásos katonák nem bocsáthatók el lelkiismereti okokból, még rendkívüli állapot idején sem.\n\nAz oktatás militarizálása, valamint nincs friss információ a Gyermekjogi Bizottság azon ajánlásának végrehajtásáról, amely szerint „biztosítani kell, hogy a gyermekeket ne vonják be olyan katonai kiképzésbe, amely lőfegyverek használatával jár”."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "No full guarantee of international protection for conscientious objectors to military service who are at risk of persecution in their country of origin."
+      "body": "Nincs teljes körű garancia a nemzetközi védelemre azoknak a katonai szolgálatot megtagadó lelkiismereti okokból szolgálatot megtagadók számára, akik származási országukban üldöztetés veszélyének vannak kitéve."
     }
   ]
 }

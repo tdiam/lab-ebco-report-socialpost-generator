@@ -1,33 +1,33 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "İLLİK HESABAT: 2025-ci ildə Avropada hərbi xidmətə vicdan etirazı",
+    "ebco": "Şüurlu etiraz üzrə Avropa Bürosu (EBCO)",
+    "outnow": "İndi satışdadır",
+    "visit": "Veb saytımıza daxil olun",
+    "covers": "İllik Hesabat 2025-ci il ərzində baş verən inkişafları əhatə edir.",
+    "moreinfo": "Daha çox məlumat əldə etmək üçün EBCO-nun veb saytına daxil olun: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "EBCO-nun illik hesabatı"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "EBCO prezidenti"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Azerbaijan:"
+    "concerns": "Azərbaycanın əsas narahatlıqları:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Davam edən silahlı münaqişələr və geosiyasi gərginliklər <strong>silah daşımamağı seçən şəxslərə</strong> olan təzyiqi gücləndirir və onları cinayət təqibinə, ayrı-seçkiliyə və təqibə məruz qalma riski ilə üz-üzə qoyur."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Dayanıqlı təhlükəsizlik <strong>militarizasiya yolu ilə</strong> əldə edilə bilməz."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Müharibədə iştirakdan imtina etmək təkcə qorunan hüquq deyil, həm də\n<strong>ədalətli və davamlı sülh</strong> qurmaq üçün zəruri şərtdir."
   }
 }

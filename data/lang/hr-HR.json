@@ -1,39 +1,39 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "Godišnje izvješće: prigovor savjesti na vojnu službu u Europi 2025",
+    "ebco": "Europski ured za prigovor savjesti (EBCO)",
+    "outnow": "Sada u prodaji",
+    "visit": "Posjetite našu web stranicu",
+    "covers": "Godišnje izvješće obuhvaća događaje tijekom 2025. godine.",
+    "moreinfo": "Za više informacija posjetite web-stranicu EBCO-a: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "Godišnje izvješće EBCO-a"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "Predsjednik EBCO-a"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Croatia:"
+    "concerns": "Glavne brige za Hrvatsku:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Trenutni oružani sukobi i geopolitičke napetosti pojačavaju pritisak na <strong>pojedince koji odbijaju nositi oružje</strong>, izlažući ih gonjenju, diskriminaciji i represiji."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Održiva sigurnost ne može se postići <strong>militarizacijom</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Odbijanje sudjelovanja u ratu nije samo zaštićeno pravo, nego i nužan uvjet za izgradnju\n<strong>pravednog i trajnog mira</strong>."
   },
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "The alternative service is punitive and discriminatory in terms of duration (50% to 100% longer than military service)."
+      "body": "Alternativna služba je kaznena i diskriminirajuća po trajanju (50% do 100% duža od vojne službe)."
     }
   ]
 }

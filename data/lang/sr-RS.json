@@ -1,43 +1,43 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "ГОДИШЊИ ИЗВЕШТАЈ: СВЕСТАНО ОДБИЈАЊЕ ВОЈНЕ СЛУЖБЕ У ЕВРОПИ 2025",
+    "ebco": "Европска канцеларија за приговор савести (EBCO)",
+    "outnow": "Сада у продаји",
+    "visit": "Посетите нашу веб-страницу",
+    "covers": "Годишњи извештај обухвата догађаје током 2025. године.",
+    "moreinfo": "За више информација посетите веб-сајт EBCO: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "Годишњи извештај EBCO"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "Председник ЕБКО"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Serbia:"
+    "concerns": "Главне бриге за Србију:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Трајни оружани сукоби и геополитичке тензије појачавају притисак на <strong>појединце који одбијају да носе оружје</strong>, излажући их гоњењу, дискриминацији и репресији."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Одржива безбедност се не може постићи <strong>милитаризацијом</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Одбијање учешћа у рату није само заштићено право, већ и неопходан услов за изградњу\n<strong>праведног и трајног мира</strong>."
   },
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "155-days military service without weapons replacing 75 days of armed service, discussed as arrangement for conscientious objectors after reintroduction of conscription planned in 2027 or 2028, does not satisfy human rights standards"
+      "body": "155-дневна војна служба без оружја, која би заменила 75 дана наоружане службе и која се разматра као аранжман за објекте по савести након поновног увођења обавезне војске планираног за 2027. или 2028. годину, не испуњава стандарде људских права."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "It is unclear if and how the law on alternative service would apply to an event of reintroduction of conscription or emergency mobilisation.\n\nThe law on alternative service lacks basic guarantees to the rights of conscientious objectors, such as accessibility to all without discrimination, full control of civilian authorities."
+      "body": "Није јасно да ли би се и како закон о алтернативној служби примењивао у случају поновног увођења обавезне војне службе или ванредне мобилизације.\n\nЗакон о алтернативној служби нема основне гаранције права приговорника савести, као што су доступност свима без дискриминације и потпуна контрола цивилних власти."
     }
   ]
 }

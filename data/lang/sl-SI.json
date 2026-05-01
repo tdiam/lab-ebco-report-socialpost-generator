@@ -1,33 +1,33 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "LETNO POROČILO: VESTNO NASPROTOVANJE VOJAŠKI SLUŽBI V EVROPI 2025",
+    "ebco": "EVROPSKI URAD ZA VESTNO ZAVRAČANJE VOJAŠKE SLUŽBE (EBCO)",
+    "outnow": "ŽE NA VOLJO",
+    "visit": "Obiščite našo spletno stran",
+    "covers": "Letno poročilo zajema dogajanja v letu 2025",
+    "moreinfo": "Za več informacij obiščite spletno stran podjetja EBCO: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "Letno poročilo družbe EBCO"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "Predsednik EBCO"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Slovenia:"
+    "concerns": "Glavne skrbi za Slovenijo:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Tekoči oboroženi spori in geopolitične napetosti še povečujejo pritisk na <strong>posameznike, ki nočejo nositi orožja</strong>, zaradi česar so izpostavljeni pregonu, diskriminaciji in zatiranju."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Trajnostne varnosti ni mogoče doseči <strong>z militarizacijo</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Zavrnitev sodelovanja v vojni ni le zaščitena pravica, temveč tudi nujen pogoj za vzpostavitev\n<strong>pravičnega in trajnega miru</strong>."
   }
 }

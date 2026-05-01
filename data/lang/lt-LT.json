@@ -1,39 +1,39 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "METINĖ ATASKAITA: SĄŽININGAS ATSISAKYMAS TARNAUTI KARINĖJE TARNYBOJE EUROPOJE 2025",
+    "ebco": "Europos sąžiningo atsisakymo tarnyba (EBCO)",
+    "outnow": "JAU GALIMA ĮSIGYTI",
+    "visit": "Apsilankykite mūsų svetainėje",
+    "covers": "Metinėje ataskaitoje apžvelgiami 2025 m. įvykiai",
+    "moreinfo": "Daugiau informacijos rasite EBCO interneto svetainėje: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "EBCO metinė ataskaita"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "EBCO prezidentas"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Lithuania:"
+    "concerns": "Pagrindiniai Lietuvos rūpesčiai:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Tęsiasi ginkluoti konfliktai ir geopolitinė įtampa dar labiau didina spaudimą tiems <strong>asmenims, kurie atsisako imtis ginklų</strong>, dėl ko jie tampa baudžiamojo persekiojimo, diskriminacijos ir represijų aukomis."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Tvaraus saugumo neįmanoma pasiekti <strong>militarizavimo būdu</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Atsisakymas dalyvauti kare yra ne tik saugoma teisė, bet ir būtina sąlyga siekiant sukurti\n<strong>teisingą ir ilgalaikę taiką</strong>."
   },
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "No recognition of the right to conscientious objection exists for reservists, conscripts or military personnel during or after their service.\n\nAsylum applications of foreign nationals claiming fear of persecution due to their conscientious objection in countries like Belarus or Russia are rejected."
+      "body": "Rezervistams, šauktiniams ar kariniams pareigūnams tarnybos metu ar po jos nepripažįstama teisė į sąžinės laisvę.\n\nUžsieniečių, teigiančių, kad bijo persekiojimo dėl savo sąžinės laisvės tokiose šalyse kaip Baltarusija ar Rusija, prieglobsčio prašymai atmetami."
     }
   ]
 }

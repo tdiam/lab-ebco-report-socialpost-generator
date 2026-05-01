@@ -1,33 +1,33 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "ГОДИШЕН ДОКЛАД: ОТКАЗ ОТ ВОЕННА СЛУЖБА ПО СЪВЕСТ В ЕВРОПА 2025",
+    "ebco": "Европейска служба за съвестно отказване от военна служба (EBCO)",
+    "outnow": "ВЕЧЕ В ПРОДАЖБА",
+    "visit": "Посетете нашия уебсайт",
+    "covers": "Годишният доклад обхваща събитията през 2025 г.",
+    "moreinfo": "За повече информация посетете уебсайта на EBCO: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "Годишен доклад на EBCO"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "Председател на EBCO"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Bulgaria:"
+    "concerns": "Основни притеснения за България:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Продължаващите въоръжени конфликти и геополитическите напрежения засилват натиска върху <strong>хората, които отказват да носят оръжие</strong>, като ги излагат на преследване, дискриминация и репресии."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Устойчивата сигурност не може да бъде постигната <strong>чрез милитаризация</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Отказът да се участва във война е не само защитено право, но и необходимо условие за изграждането\n<strong>на справедлив и траен мир</strong>."
   }
 }

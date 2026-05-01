@@ -1,33 +1,33 @@
 {
   "cover": {
-    "heading": "ANNUAL REPORT: CONSCIENTIOUS OBJECTION TO MILITARY SERVICE IN EUROPE 2025",
-    "ebco": "EUROPEAN BUREAU FOR CONSCIENTIOUS OBJECTION (EBCO)",
-    "outnow": "OUT NOW",
-    "visit": "Visit our website",
-    "covers": "The Annual Report covers developments during 2025",
-    "moreinfo": "To find more information, visit EBCO’s website: www.ebco-beoc.org"
+    "heading": "Godišnji izvještaj: savjesni prigovor vojnoj službi u Evropi 2025",
+    "ebco": "Evropski biro za prigovor savjesti (EBCO)",
+    "outnow": "SADA U PRODAJI",
+    "visit": "Posjetite našu web stranicu",
+    "covers": "Godišnji izvještaj obuhvata događaje tokom 2025. godine.",
+    "moreinfo": "Za više informacija posjetite web stranicu EBCO-a: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO Annual Report"
+    "heading": "Godišnji izvještaj EBCO-a"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO President"
+    "creditTitle": "Predsjednik EBCO-a"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principal concerns for Bosnia and Herzegovina:"
+    "concerns": "Glavne brige za Bosnu i Hercegovinu:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",
-    "body": "Ongoing armed conflicts and geopolitical tensions are intensifying pressures on <strong>individuals who refuse to bear arms</strong> exposing them to prosecution, discrimination, and repression."
+    "body": "Otkriiveni oružani sukobi i geopolitičke tenzije pojačavaju pritisak na <strong>pojedince koji odbijaju nositi oružje</strong>, izlažući ih gonjenju, diskriminaciji i represiji."
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "Sustainable security cannot be achieved <strong>through militarisation</strong>."
+    "body": "Održiva sigurnost se ne može postići <strong>militarizacijom</strong>."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "Odbijanje sudjelovanja u ratu nije samo zaštićeno pravo, već i neophodan uslov za izgradnju\n<strong>pravednog i trajnog mira</strong>."
   }
 }
