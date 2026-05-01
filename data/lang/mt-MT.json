@@ -1,11 +1,11 @@
 {
   "cover": {
-    "heading": "Rapport Annwali: Oġġezzjoni ta&#x27; Kuxjenza għas-Servizz Militari fl-Ewropa 2025",
-    "ebco": "Uffiċċju Ewropew għall-Oġġezzjoni ta&#x27; Kuxjenza (EBCO)",
+    "heading": "Rapport Annwali: Oġġezzjoni ta’ Kuxjenza għas-Servizz Militari fl-Ewropa 2025",
+    "ebco": "Uffiċċju Ewropew għall-Oġġezzjoni ta’ Kuxjenza (EBCO)",
     "outnow": "Diġà disponibbli",
     "visit": "Żur il-websajt tagħna",
     "covers": "Ir-Rapport Annwali jkopri l-iżviluppi matul is-sena 2025.",
-    "moreinfo": "Biex issib aktar informazzjoni, żur is-sit web ta&#x27; EBCO: www.ebco-beoc.org"
+    "moreinfo": "Biex issib aktar informazzjoni, żur is-sit web ta’ EBCO: www.ebco-beoc.org"
   },
   "_quote": {
     "heading": "Rapport Annwali tal-EBCO"
@@ -33,7 +33,7 @@
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "M&#x27;hemm l-ebda rikonoxximent tad-dritt għall-objizzjoni ta&#x27; kuxjenza għal dawk li jkunu arruolati fis-servizz volontarju, fis-servizz ta&#x27; riserva, jew fil-persunal militari."
+      "body": "M’hemm l-ebda rikonoxximent tad-dritt għall-objizzjoni ta’ kuxjenza għal dawk li jkunu arruolati fis-servizz volontarju, fis-servizz ta’ riserva, jew fil-persunal militari."
     }
   ]
 }

@@ -1,18 +1,18 @@
 {
   "cover": {
-    "heading": "RAPPORT ANNUEL : L&#x27;OBJECTION DE CONSCIENCE EN EUROPE 2025",
-    "ebco": "BUREAU EUROPÉEN POUR L&#x27;OBJECTION DE CONSCIENCE (EBCO)",
+    "heading": "RAPPORT ANNUEL : L’OBJECTION DE CONSCIENCE EN EUROPE 2025",
+    "ebco": "BUREAU EUROPÉEN POUR L’OBJECTION DE CONSCIENCE (EBCO)",
     "outnow": "DISPONIBLE DÈS MAINTENANT",
     "visit": "Visitez notre site web",
-    "covers": "Le rapport annuel rend compte des développements intervenus au cours de l&#x27;année 2025",
-    "moreinfo": "Pour plus d&#x27;informations, rendez-vous sur le site web d&#x27;EBCO : www.ebco-beoc.org"
+    "covers": "Le rapport annuel rend compte des développements intervenus au cours de l’année 2025",
+    "moreinfo": "Pour plus d’informations, rendez-vous sur le site web d’EBCO : www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "Rapport annuel de l&#x27;EBCO"
+    "heading": "Rapport annuel de l’EBCO"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "Président de l&#x27;EBCO"
+    "creditTitle": "Président de l’EBCO"
   },
   "_concerns_quote": {
     "$parent": "_quote",
@@ -24,20 +24,20 @@
   },
   "quote_2": {
     "$parent": "_foreword_quote",
-    "body": "<strong>La militarisation</strong> ne permet pas d&#x27;assurer une sécurité durable."
+    "body": "<strong>La militarisation</strong> ne permet pas d’assurer une sécurité durable."
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Le refus de participer à la guerre n&#x27;est pas seulement un droit protégé, mais aussi une condition indispensable à l&#x27;instauration\n<strong>d&#x27;une paix juste et durable</strong>."
+    "body": "Le refus de participer à la guerre n’est pas seulement un droit protégé, mais aussi une condition indispensable à l’instauration\n<strong>d’une paix juste et durable</strong>."
   },
   "concerns": [
     {
       "$parent": "_concerns_quote",
-      "body": "Absence de reconnaissance du droit à l&#x27;objection de conscience pour les militaires de carrière ou les réservistes.\n\nExposition des mineurs à des programmes et à des formations militaires."
+      "body": "Absence de reconnaissance du droit à l’objection de conscience pour les militaires de carrière ou les réservistes.\n\nExposition des mineurs à des programmes et à des formations militaires."
     },
     {
       "$parent": "_concerns_quote",
-      "body": "Il n&#x27;existe pas de garantie totale de protection internationale pour les objecteurs de conscience au service militaire qui risquent d&#x27;être persécutés dans leur pays d&#x27;origine."
+      "body": "Il n’existe pas de garantie totale de protection internationale pour les objecteurs de conscience au service militaire qui risquent d’être persécutés dans leur pays d’origine."
     }
   ]
 }

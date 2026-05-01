@@ -1,7 +1,7 @@
 {
   "cover": {
     "heading": "RELAZIONE ANNUALE: OBIEZIONE DI COSCIENZA AL SERVIZIO MILITARE IN EUROPA 2025",
-    "ebco": "UFFICIO EUROPEO PER L&#x27;OBIEZIONE DI COSCIENZA (EBCO)",
+    "ebco": "UFFICIO EUROPEO PER L’OBIEZIONE DI COSCIENZA (EBCO)",
     "outnow": "DISPONIBILE ORA",
     "visit": "Visita il nostro sito web",
     "covers": "La relazione annuale illustra gli sviluppi avvenuti nel corso del 2025",
@@ -12,11 +12,11 @@
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "Presidente dell&#x27;EBCO"
+    "creditTitle": "Presidente dell’EBCO"
   },
   "_concerns_quote": {
     "$parent": "_quote",
-    "concerns": "Principali preoccupazioni per l&#x27;Italia:"
+    "concerns": "Principali preoccupazioni per l’Italia:"
   },
   "quote_1": {
     "$parent": "_foreword_quote",

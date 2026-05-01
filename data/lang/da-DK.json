@@ -8,11 +8,11 @@
     "moreinfo": "Du kan finde mere information på EBCO’s hjemmeside: www.ebco-beoc.org"
   },
   "_quote": {
-    "heading": "EBCO&#x27;s årsrapport"
+    "heading": "EBCO’s årsrapport"
   },
   "_foreword_quote": {
     "$parent": "_quote",
-    "creditTitle": "EBCO&#x27;s formand"
+    "creditTitle": "EBCO’s formand"
   },
   "_concerns_quote": {
     "$parent": "_quote",
