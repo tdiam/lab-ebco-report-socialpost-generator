@@ -192,9 +192,10 @@
       import debounce from 'https://cdn.jsdelivr.net/npm/debounce@3.0.0/+esm';
       import { throttle } from 'https://cdn.jsdelivr.net/npm/throttle-debounce@3.0.1/+esm';
 
+      const PAGE_URL = new URL(location.href);
 
       const previewEl = document.getElementById('preview-image');
-      const DEBUG = new URL(window.location.href).searchParams.has('debug');
+      const DEBUG = PAGE_URL.searchParams.has('debug');
       const CANVAS_WIDTH = previewEl.getAttribute('width');
       const CANVAS_HEIGHT = previewEl.getAttribute('height');
 
@@ -613,22 +614,23 @@
       const Delta = Quill.import('delta');
 
       function initFromUrl() {
-        const u = new URL(window.location.href);
         for (const [name, e] of Object.entries(editables)) {
-          if (u.searchParams.has(name)) {
-            const raw = u.searchParams.get(name);
-            let ops = null;
-            try {
-              const parsed = JSON.parse(raw);
-              if (Array.isArray(parsed)) ops = parsed;
-            } catch (_) {}
+          const raw = PAGE_URL.searchParams.get(name);
+          if (!raw) {
+            return;
+          }
 
-            e.quill.setContents([]);
-            if (ops) {
-              e.quill.updateContents(new Delta(ops));
-            } else {
-              e.quill.updateContents(new Delta().insert(raw));
-            }
+          let ops = null;
+          try {
+            const parsed = JSON.parse(raw);
+            if (Array.isArray(parsed)) ops = parsed;
+          } catch (_) {}
+
+          e.quill.setContents([]);
+          if (ops) {
+            e.quill.updateContents(new Delta(ops));
+          } else {
+            e.quill.updateContents(new Delta().insert(raw));
           }
         }
       }
