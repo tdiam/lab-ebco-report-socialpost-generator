@@ -13,7 +13,7 @@
       rel="preload"
       as="style"
     />
-    <link href="assets/bg.png" rel="preload" as="image" />
+    <link href="./assets/bg.png" rel="preload" as="image" />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:wght@400;700;900&display=block"
       rel="stylesheet"
@@ -204,7 +204,7 @@
 
       const background = new Promise((res) => {
         const im = new Image();
-        im.src = `assets/bg.png`;
+        im.src = `./assets/bg.png`;
         im.fetchPriority = 'high';
         im.onload = function () {
           res(im);

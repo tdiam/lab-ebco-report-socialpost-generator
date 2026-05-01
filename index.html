@@ -206,7 +206,7 @@
         }
 
         const params = new URLSearchParams(serialized);
-        return `./${template}?${params.toString()}`;
+        return `./${template}/?${params.toString()}`;
       }
 
       function makeLink(template, translation) {
