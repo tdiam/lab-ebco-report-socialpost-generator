@@ -28,7 +28,7 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Die Verweigerung der Kriegsbeteiligung ist nicht nur ein geschütztes Recht, sondern eine notwendige Voraussetzung für den Aufbau\n<strong>eines gerechten und dauerhaften Friedens</strong>."
+    "body": "Die Verweigerung der Kriegsbeteiligung ist nicht nur ein geschütztes Recht, sondern eine notwendige Voraussetzung für den Aufbau <strong>eines gerechten und dauerhaften Friedens</strong>."
   },
   "concerns": [
     {

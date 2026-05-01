@@ -28,6 +28,6 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Nektelsen av å delta i krig er ikke bare en beskyttet rettighet, men også en nødvendig forutsetning for å skape\n<strong>en rettferdig og varig fred</strong>."
+    "body": "Nektelsen av å delta i krig er ikke bare en beskyttet rettighet, men også en nødvendig forutsetning for å skape <strong>en rettferdig og varig fred</strong>."
   }
 }

@@ -28,7 +28,7 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Ir-rifjut li wieħed jipparteċipa fil-gwerra mhux biss huwa dritt protett, iżda wkoll kundizzjoni meħtieġa biex tinbena\n<strong>paċi ġusta u durabbli</strong>."
+    "body": "Ir-rifjut li wieħed jipparteċipa fil-gwerra mhux biss huwa dritt protett, iżda wkoll kundizzjoni meħtieġa biex tinbena <strong>paċi ġusta u durabbli</strong>."
   },
   "concerns": [
     {

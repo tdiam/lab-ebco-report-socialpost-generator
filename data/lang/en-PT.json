@@ -28,6 +28,6 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building\n<strong>a just and lasting peace</strong>."
+    "body": "The refusal to participate in war is not only a protected right, but a necessary condition for building <strong>a just and lasting peace</strong>."
   }
 }

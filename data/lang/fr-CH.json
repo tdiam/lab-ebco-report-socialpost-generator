@@ -28,6 +28,6 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Le refus de participer à la guerre n’est pas seulement un droit protégé, mais aussi une condition indispensable à l’instauration\n<strong>d’une paix juste et durable</strong>."
+    "body": "Le refus de participer à la guerre n’est pas seulement un droit protégé, mais aussi une condition indispensable à l’instauration <strong>d’une paix juste et durable</strong>."
   }
 }

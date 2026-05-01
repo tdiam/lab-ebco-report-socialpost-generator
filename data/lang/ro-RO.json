@@ -28,6 +28,6 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Refuzul de a participa la război nu este doar un drept protejat, ci și o condiție necesară pentru construirea\n<strong>unei păci juste și durabile</strong>."
+    "body": "Refuzul de a participa la război nu este doar un drept protejat, ci și o condiție necesară pentru construirea <strong>unei păci juste și durabile</strong>."
   }
 }

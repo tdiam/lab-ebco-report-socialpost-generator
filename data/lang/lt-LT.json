@@ -28,7 +28,7 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Atsisakymas dalyvauti kare yra ne tik saugoma teisė, bet ir būtina sąlyga siekiant sukurti\n<strong>teisingą ir ilgalaikę taiką</strong>."
+    "body": "Atsisakymas dalyvauti kare yra ne tik saugoma teisė, bet ir būtina sąlyga siekiant sukurti <strong>teisingą ir ilgalaikę taiką</strong>."
   },
   "concerns": [
     {

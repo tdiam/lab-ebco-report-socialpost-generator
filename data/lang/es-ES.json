@@ -28,6 +28,6 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "La negativa a participar en la guerra no solo es un derecho protegido, sino también una condición necesaria para construir\n<strong>una paz justa y duradera</strong>."
+    "body": "La negativa a participar en la guerra no solo es un derecho protegido, sino también una condición necesaria para construir <strong>una paz justa y duradera</strong>."
   }
 }

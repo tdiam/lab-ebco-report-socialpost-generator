@@ -28,6 +28,6 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Neitun til þátttöku í stríði er ekki aðeins vernduð réttur, heldur nauðsynleg forsenda fyrir að byggja upp\n<strong>réttlátan og varanlegan frið</strong>."
+    "body": "Neitun til þátttöku í stríði er ekki aðeins vernduð réttur, heldur nauðsynleg forsenda fyrir að byggja upp <strong>réttlátan og varanlegan frið</strong>."
   }
 }

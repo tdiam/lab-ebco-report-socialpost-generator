@@ -28,6 +28,6 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Zavrnitev sodelovanja v vojni ni le zaščitena pravica, temveč tudi nujen pogoj za vzpostavitev\n<strong>pravičnega in trajnega miru</strong>."
+    "body": "Zavrnitev sodelovanja v vojni ni le zaščitena pravica, temveč tudi nujen pogoj za vzpostavitev <strong>pravičnega in trajnega miru</strong>."
   }
 }

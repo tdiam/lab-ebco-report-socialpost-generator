@@ -28,6 +28,6 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Il rifiuto di partecipare alla guerra non è solo un diritto tutelato, ma una condizione necessaria per costruire\n<strong>una pace giusta e duratura</strong>."
+    "body": "Il rifiuto di partecipare alla guerra non è solo un diritto tutelato, ma una condizione necessaria per costruire <strong>una pace giusta e duratura</strong>."
   }
 }

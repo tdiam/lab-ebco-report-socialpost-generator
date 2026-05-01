@@ -28,6 +28,6 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Vägran att delta i krig är inte bara en skyddad rättighet, utan också en nödvändig förutsättning för att skapa\n<strong>en rättvis och varaktig fred</strong>."
+    "body": "Vägran att delta i krig är inte bara en skyddad rättighet, utan också en nödvändig förutsättning för att skapa <strong>en rättvis och varaktig fred</strong>."
   }
 }

@@ -28,6 +28,6 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Refuzimi për të marrë pjesë në luftë nuk është vetëm një e drejtë e mbrojtur, por edhe një kusht i nevojshëm për ndërtimin e\n<strong>një paqeje të drejtë dhe të qëndrueshme</strong>."
+    "body": "Refuzimi për të marrë pjesë në luftë nuk është vetëm një e drejtë e mbrojtur, por edhe një kusht i nevojshëm për ndërtimin e <strong>një paqeje të drejtë dhe të qëndrueshme</strong>."
   }
 }

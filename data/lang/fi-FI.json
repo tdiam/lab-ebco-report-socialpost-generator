@@ -28,7 +28,7 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Sodan kieltäytyminen ei ole pelkästään suojattu oikeus, vaan myös välttämätön edellytys\n<strong>oikeudenmukaisen ja kestävän rauhan</strong> rakentamiselle."
+    "body": "Sodan kieltäytyminen ei ole pelkästään suojattu oikeus, vaan myös välttämätön edellytys <strong>oikeudenmukaisen ja kestävän rauhan</strong> rakentamiselle."
   },
   "concerns": [
     {

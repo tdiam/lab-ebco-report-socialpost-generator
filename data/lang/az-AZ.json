@@ -28,6 +28,6 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Müharibədə iştirakdan imtina etmək təkcə qorunan hüquq deyil, həm də\n<strong>ədalətli və davamlı sülh</strong> qurmaq üçün zəruri şərtdir."
+    "body": "Müharibədə iştirakdan imtina etmək təkcə qorunan hüquq deyil, həm də <strong>ədalətli və davamlı sülh</strong> qurmaq üçün zəruri şərtdir."
   }
 }

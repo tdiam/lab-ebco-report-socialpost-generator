@@ -28,7 +28,7 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Savaşa katılmayı reddetmek sadece korunan bir hak değil, aynı zamanda\n<strong>adil ve kalıcı bir barışın</strong> inşası için de vazgeçilmez bir koşuldur."
+    "body": "Savaşa katılmayı reddetmek sadece korunan bir hak değil, aynı zamanda <strong>adil ve kalıcı bir barışın</strong> inşası için de vazgeçilmez bir koşuldur."
   },
   "concerns": [
     {

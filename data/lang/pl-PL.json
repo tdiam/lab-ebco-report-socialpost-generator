@@ -28,7 +28,7 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Odmowa udziału w wojnie jest nie tylko prawem chronionym, ale także niezbędnym warunkiem budowania\n<strong>sprawiedliwego i trwałego pokoju</strong>."
+    "body": "Odmowa udziału w wojnie jest nie tylko prawem chronionym, ale także niezbędnym warunkiem budowania <strong>sprawiedliwego i trwałego pokoju</strong>."
   },
   "concerns": [
     {

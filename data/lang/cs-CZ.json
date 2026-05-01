@@ -28,6 +28,6 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Odmítnutí účasti ve válce není jen chráněným právem, ale také nezbytnou podmínkou pro vybudování\n<strong>spravedlivého a trvalého míru</strong>."
+    "body": "Odmítnutí účasti ve válce není jen chráněným právem, ale také nezbytnou podmínkou pro vybudování <strong>spravedlivého a trvalého míru</strong>."
   }
 }

@@ -28,6 +28,6 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Odbijanje sudjelovanja u ratu nije samo zaštićeno pravo, već i neophodan uslov za izgradnju\n<strong>pravednog i trajnog mira</strong>."
+    "body": "Odbijanje sudjelovanja u ratu nije samo zaštićeno pravo, već i neophodan uslov za izgradnju <strong>pravednog i trajnog mira</strong>."
   }
 }

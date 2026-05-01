@@ -28,6 +28,6 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Sõjas osalemise keeldumine ei ole mitte ainult kaitstud õigus, vaid ka\n<strong>õiglase ja püsiva rahu</strong> saavutamise eeltingimus."
+    "body": "Sõjas osalemise keeldumine ei ole mitte ainult kaitstud õigus, vaid ka <strong>õiglase ja püsiva rahu</strong> saavutamise eeltingimus."
   }
 }

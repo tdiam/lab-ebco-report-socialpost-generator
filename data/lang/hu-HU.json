@@ -28,7 +28,7 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "A háborúban való részvétel megtagadása nem csupán védett jog, hanem\n<strong>az igazságos és tartós béke</strong> megteremtésének elengedhetetlen feltétele is."
+    "body": "A háborúban való részvétel megtagadása nem csupán védett jog, hanem <strong>az igazságos és tartós béke</strong> megteremtésének elengedhetetlen feltétele is."
   },
   "concerns": [
     {

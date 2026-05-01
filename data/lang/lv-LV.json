@@ -28,7 +28,7 @@
   },
   "quote_3": {
     "$parent": "_foreword_quote",
-    "body": "Atsacīšanās piedalīties karā ir ne tikai tiesības, kas tiek aizsargātas, bet arī nepieciešams priekšnoteikums\n<strong>taisnīga un ilgstoša miera</strong> veidošanai."
+    "body": "Atsacīšanās piedalīties karā ir ne tikai tiesības, kas tiek aizsargātas, bet arī nepieciešams priekšnoteikums <strong>taisnīga un ilgstoša miera</strong> veidošanai."
   },
   "concerns": [
     {
