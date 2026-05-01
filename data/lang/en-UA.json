@@ -37,7 +37,11 @@
     },
     {
       "$parent": "_concerns_quote",
-      "body": "Objectors face severe persecution, discrimination, torture, and hostile media campaigns, Supreme Court rulings treat conscientious objection as draft evasion, disobedience and a criminal offence, and appeals to Constitutional Court suffer judicial delays.\n\nViolent \"busification\" (forcible conscription) practices and military registration enforcement by Territorial Conscription Centers (TCC) and police lead to arbitrary detentions incommunicado, beatings, cruel treatment and deaths, restrictions in access to work, education, and public services."
+      "body": "Objectors face severe persecution, discrimination, torture, and hostile media campaigns, Supreme Court rulings treat conscientious objection as draft evasion, disobedience and a criminal offence, and appeals to Constitutional Court suffer judicial delays."
+    },
+    {
+      "$parent": "_concerns_quote",
+      "body": "Violent \"busification\" (forcible conscription) practices and military registration enforcement by Territorial Conscription Centers (TCC) and police lead to arbitrary detentions incommunicado, beatings, cruel treatment and deaths, restrictions in access to work, education, and public services."
     },
     {
       "$parent": "_concerns_quote",
