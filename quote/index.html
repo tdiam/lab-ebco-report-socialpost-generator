@@ -499,6 +499,36 @@
         }
       }
 
+      function breakWords({
+        ctx,
+        words,
+        maxWidth,
+      }) {
+        const res = [];
+
+        for (let i = 0; i < words.length; i++) {
+          let word = words[i] + (i < words.length - 1 ? ' ' : '');
+
+          let wordWidth = ctx.measureText(word).width;
+
+          while (wordWidth > maxWidth) {
+            const cutoff = Math.floor(maxWidth / wordWidth * word.length) - 2;
+            res.push(word.slice(0, cutoff) + '-')
+
+            word = word.slice(cutoff);
+            wordWidth = ctx.measureText(word).width;
+          }
+
+          if (!word.length) {
+            continue
+          }
+
+          res.push(word);
+        }
+
+        return res;
+      }
+
       function wrapBlockSegments({
         ctx,
         segments,
@@ -511,19 +541,22 @@
         let currentWidth = 0;
 
         for (const seg of segments) {
+          let font = { ...baseFont };
+          // we use Quill's "Bold" to toggle a highlight behind the text
+          if (seg.bold) {
+            font.highlight = true;
+          }
+
+          ctx.font = `${font.style} ${font.size}px "${font.family}"`;
+
           const text = seg.text || '';
-          const words = text.split(' ');
+          const words = breakWords({
+            ctx,
+            words: text.split(' '),
+            maxWidth,
+          });
 
-          for (let i = 0; i < words.length; i++) {
-            const word = words[i] + (i < words.length - 1 ? ' ' : '');
-
-            let font = { ...baseFont };
-            // we use Quill's "Bold" to toggle a highlight behind the text
-            if (seg.bold) {
-              font.highlight = true;
-            }
-
-            ctx.font = `${font.style} ${font.size}px "${font.family}"`;
+          for (const word of words) {
             const wordWidth = ctx.measureText(word).width;
 
             if (currentWidth + wordWidth > maxWidth && currentLine.length > 0) {
