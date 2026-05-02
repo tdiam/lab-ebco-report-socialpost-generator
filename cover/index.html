@@ -709,7 +709,10 @@
         });
       });
 
-      document.fonts.ready.then(renderCanvas);
+      Promise.all([
+        document.fonts.load('400 1px "Noto Sans"', PAGE_URL.searchParams.get(Object.keys(editables)[0])),
+        document.fonts.load('700 1px "Noto Sans"', PAGE_URL.searchParams.get(Object.keys(editables)[0])),
+      ]).then(renderCanvas);
     </script>
   </body>
 </html>
