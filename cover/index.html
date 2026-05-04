@@ -233,6 +233,20 @@
           ctx.rect(0, 0, canvas.width, canvas.height);
           ctx.fill();
         },
+        year: {
+          font: {
+            size: [32],
+            style: '700',
+            family: 'Noto Sans',
+          },
+          containerHeight: 80,
+          containerWidth: 320,
+          lineHeight: 1.5,
+          color: '#38519e',
+          x: 220,
+          y: 100,
+          align: 'center',
+        },
         heading: {
           font: {
             size: [44, 40, 36],
@@ -314,7 +328,20 @@
         },
       };
 
-      const statics = {};
+      const statics = {
+        year: {
+          block: {
+            segments: [{
+              text: (
+                new Intl.DateTimeFormat(
+                  PAGE_URL.searchParams.get('l'),
+                  { month: 'long', year: 'numeric' },
+                )
+              ).format(Date.parse('2026-05-15')),
+            }],
+          },
+        },
+      };
 
       const editables = {
         heading: {
@@ -657,7 +684,7 @@
         for (const [name, txt] of Object.entries(statics)) {
           wrapAndRenderBlocks({
             ctx,
-            blocks: [{ align: 'left', ...txt.block }],
+            blocks: [txt.block],
             x: template[name].x,
             y: template[name].y,
             maxWidth: template[name].containerWidth ?? canvas.width,

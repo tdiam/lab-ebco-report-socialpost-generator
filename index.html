@@ -221,8 +221,8 @@
         return cache[locale];
       }
 
-      function buildUrl(template, translation) {
-        const serialized = {};
+      function buildUrl(template, locale, translation) {
+        const serialized = { l: locale };
         for (const [key, val] of Object.entries(translation)) {
           const parts = val.split(/<strong>([^<]*)<\/strong>/);
           if (parts.length === 1) {
@@ -250,10 +250,10 @@
         return `./${template}/?${params.toString()}`;
       }
 
-      function makeLink(template, translation) {
+      function makeLink(template, locale, translation) {
         const a = document.createElement('a');
         a.className = 'template-card';
-        a.href = buildUrl(template.template, translation);
+        a.href = buildUrl(template.template, locale, translation);
         a.innerHTML = `
           <img src="${template.background}" alt="" />
           ${template.overlay ? `<div class="overlay">${template.overlay}</div>` : ''}
@@ -262,10 +262,9 @@
         return a;
       }
 
-      async function render(translationsLoader) {
+      function render({ locale, translations }) {
         gallery.innerHTML = '';
 
-        const translations = await translationsLoader();
         const resolveTranslation = (t) => {
           const { $parent, ...rest } = t ?? {};
           const parentData = $parent ? resolveTranslation(translations[$parent]) : {}
@@ -275,14 +274,14 @@
         for (const template of TEMPLATES) {
           const translation = resolveTranslation(translations[template.id]);
           if (!translation) continue;
-          gallery.appendChild(makeLink(template, translation));
+          gallery.appendChild(makeLink(template, locale, translation));
         }
 
         for (const [idx, concern] of Object.entries(translations.concerns ?? [])) {
           const translation = resolveTranslation(concern);
           let overlay = translation.body.length > 100 ? `${translation.body.slice(0, 97)}&hellip;` : translation.body;
           const template = makeCountryQuoteTemplate({ id: `concern_${idx}`, overlay });
-          gallery.appendChild(makeLink(template, translation));
+          gallery.appendChild(makeLink(template, locale, translation));
         }
       }
 
@@ -305,22 +304,26 @@
         const url = new URL(window.location.href);
         url.searchParams.set('locale', locale);
         window.history.pushState({ locale }, '', url);
-        render(() => loadPack(locale));
+        const translations = await loadPack(locale);
+        render({ locale, translations });
       }
 
       langSelect.addEventListener('change', onChange);
 
       // Handle browser back/forward navigation
-      window.addEventListener('popstate', (e) => {
+      window.addEventListener('popstate', async (e) => {
         const locale = e.state?.locale ?? new URLSearchParams(window.location.search).get('locale') ?? 'en-GB';
 
         langSelect.removeEventListener('change', onChange);
         yoSelect.setValue(locale);
-        render(() => loadPack(locale));
+        const translations = await loadPack(locale);
+        render({ locale, translations });
         langSelect.addEventListener('change', onChange);
       });
 
-      render(() => loadPack(initialLocale));
+      loadPack(initialLocale).then((translations) => {
+        render({ locale: initialLocale, translations });
+      });
     </script>
   </body>
 </html>
